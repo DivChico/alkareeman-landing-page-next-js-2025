@@ -1,0 +1,53 @@
+"use client";
+
+import React from "react";
+import "./embla.css";
+import {
+  PrevButton,
+  NextButton,
+  usePrevNextButtons,
+} from "./EmblaCarouselArrowButtons";
+import useEmblaCarousel from "embla-carousel-react";
+import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
+import TestimonialCard from "../TestimonialCard";
+
+const EmblaCarousel = (props) => {
+  const { slides, options } = props;
+  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi);
+
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
+
+  return (
+    <section className="embla relative ">
+      <div className="flex  items-center justify-between md:hidden  ">
+        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+      </div>
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container ">
+          {slides.map((index) => (
+            <div className="embla__slide " key={index}>
+              <TestimonialCard />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="hidden md:block absolute top-1/2 -left-20">
+        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+      </div>
+      <div className="hidden md:block  absolute top-1/2 -right-20">
+        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+      </div>
+    </section>
+  );
+};
+
+export default EmblaCarousel;
