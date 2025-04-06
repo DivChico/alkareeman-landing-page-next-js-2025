@@ -18,15 +18,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <div className="absolute top-0 left-0 w-full h-full -z-10">
-        <Image
-          src="/background.png"
-          alt="background"
-          layout="fill"
-          objectFit="cover"
-          className=" opacity-5"
-        />
-      </div>
       <div
         className={`${cairo.className} container mx-auto  text-center px-5  lg:px-32 `}
       >
