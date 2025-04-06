@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         />
       </div>
       <div
-        className={`${cairo.className} container mx-auto  text-center  px-32 `}
+        className={`${cairo.className} container mx-auto  text-center px-5  lg:px-32 `}
       >
         <Header />
         <body className={` antialiased`}>{children}</body>

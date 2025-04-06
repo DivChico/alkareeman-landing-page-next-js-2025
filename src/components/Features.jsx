@@ -3,7 +3,7 @@ import FeatureCard from "./FeatureCard";
 
 const Features = () => {
   return (
-    <section className="py-16 grid grid-cols-1 md:grid-cols-3">
+    <section className="py-16 flex flex-col md:flex-row-reverse gap-8 items-center justify-center ">
       <FeatureCard
         image={"/support.png"}
         text={

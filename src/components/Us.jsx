@@ -3,7 +3,7 @@ import React from "react";
 
 const Us = () => {
   return (
-    <section className="py-16 flex flex-row-reverse items-center justify-center gap-8 ">
+    <section className="py-16 flex flex-col md:flex-row-reverse items-center justify-center gap-8 ">
       <div className="max-w-md space-y-4 text-right">
         {" "}
         <h2 className=" font-bold text-fontPrimary text-4xl">نحن</h2>
@@ -21,7 +21,7 @@ const Us = () => {
           width={600}
           height={600}
         ></Image>
-        <div className=" h-[600px] w-[600px] rounded-2xl absolute top-3 left-0 -z-1 border-fontPrimary border-8 transform skew-x-[-8deg] skew-y-[8deg] "></div>
+        <div className=" h-[500px] md:h-[600px] w-[580px] md:w-[600px] rounded-2xl absolute top-3 left-0 -z-1 border-fontPrimary border-8 transform skew-x-[-8deg] skew-y-[8deg] "></div>
       </div>
     </section>
   );
