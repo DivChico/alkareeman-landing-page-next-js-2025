@@ -11,8 +11,8 @@ const sstArabic = localFont({
 });
 
 export const metadata = {
-  title: "الكاريمان للابتكار التقني",
-  description: "الكاريمان للابتكار التقني",
+  title: "  شركة الـتمـيـز الرقمي",
+  description: "  شركة الـتمـيـز الرقمي",
 };
 
 export default function RootLayout({ children }) {
@@ -27,12 +27,12 @@ export default function RootLayout({ children }) {
           className=" opacity-5"
         />
       </div>
-      <main
-        className={`${cairo.className} container mx-auto  text-center  px-8`}
+      <div
+        className={`${cairo.className} container mx-auto  text-center  px-32 `}
       >
         <Header />
         <body className={` antialiased`}>{children}</body>
-      </main>
+      </div>
     </html>
   );
 }

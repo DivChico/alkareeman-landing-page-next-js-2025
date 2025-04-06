@@ -3,10 +3,10 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="  flex justify-center gap-16 flex-row-reverse items-center">
+    <header className="  flex justify-between gap-16 py-2  flex-row-reverse items-center">
       {/* logo */}
       <div>
-        <Image src="/logo.png" width={250} height={200} alt="Logo" />
+        <Image src="/logo.png" width={100} height={100} alt="Logo" />
       </div>
       <nav className="">
         <ul className="flex flex-row-reverse gap-6 text-sm px-2 py-4 h-16">
