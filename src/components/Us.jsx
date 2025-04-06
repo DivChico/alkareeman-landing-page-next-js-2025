@@ -14,14 +14,16 @@ const Us = () => {
           تساعدك على النجاح في عالم الأعمال الرقمي المتسارع،
         </p>
       </div>
-      <div className=" relative">
+
+      <div className="relative w-[300px] md:w-[600px]">
         <Image
-          src={"/usImage.jpg"}
-          className=" rounded-2xl"
+          src="/usImage.jpg"
+          className="rounded-2xl"
           width={600}
           height={600}
-        ></Image>
-        <div className=" h-[500px] md:h-[600px] w-[580px] md:w-[600px] rounded-2xl absolute top-3 left-0 -z-1 border-fontPrimary border-8 transform skew-x-[-8deg] skew-y-[8deg] "></div>
+          alt="Us Image"
+        />
+        <div className="absolute top-0 left-0 w-full h-full rounded-2xl border-8 border-fontPrimary transform skew-x-[-8deg] skew-y-[8deg] -z-10"></div>
       </div>
     </section>
   );

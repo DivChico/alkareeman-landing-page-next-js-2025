@@ -3,7 +3,7 @@ import React from "react";
 
 const FeatureCard = ({ image, text }) => {
   return (
-    <div className="relative w-[450px] h-[174px]">
+    <div className="relative w-[300px] md:w-[450px] h-[174px]">
       <div className=" h-full w-full gap-2  bg-white rounded-2xl border-black flex flex-row-reverse items-center p-4">
         <div className="flex justify-center items-center align-middle  h-full">
           <Image src={image} height={70} width={70}></Image>
