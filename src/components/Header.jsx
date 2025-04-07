@@ -6,9 +6,11 @@ const Header = () => {
     <header className=" container mx-auto text-center px-5 lg:px-32 flex justify-between gap-16 py-2  flex-row-reverse items-center">
       {/* logo */}
       <div>
-        <a href="/">
-          {" "}
-          <Image src="/logo.png" width={100} height={100} alt="Logo" />
+        <a href="/" className=" flex justify-center items-center gap-2">
+          <p className="font-semibold tracking-wide text-lg md:hidden">
+            التميز الرقمي
+          </p>{" "}
+          <Image src="/logo.png" width={50} height={50} alt="Logo" />
         </a>
       </div>
       <nav className="hidden md:block">

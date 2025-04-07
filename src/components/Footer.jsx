@@ -24,24 +24,27 @@ const Footer = () => {
         <div className="   flex  flex-row items-center justify-center gap-4 md:gap-20  lg:gap-32">
           <ul className="space-y-2">
             <li>
-              <FooterLink>الصفحة الرئيسية</FooterLink>
+              <FooterLink href={"/"}>الصفحة الرئيسية</FooterLink>
             </li>
             <li>
-              <FooterLink>نبذة عنا</FooterLink>
+              <FooterLink href={"#about-us"}>نبذة عنا</FooterLink>
             </li>
             <li>
-              <FooterLink>اطلب الخدمة</FooterLink>
+              <FooterLink href={"/contact-us"}>اطلب الخدمة</FooterLink>
             </li>
           </ul>
           <ul className="space-y-2">
             <li>
-              <FooterLink> قدم على وظيفة</FooterLink>
+              <FooterLink href={"/apply-job"}> قدم على وظيفة</FooterLink>
             </li>
             <li>
-              <FooterLink>تواصل معنا </FooterLink>
+              <FooterLink href={"/contact-us"}>تواصل معنا </FooterLink>
             </li>
             <li>
-              <FooterLink> سياساتنا وشروطنا</FooterLink>
+              <FooterLink href={"/privacy-policy"}>
+                {" "}
+                سياساتنا وشروطنا
+              </FooterLink>
             </li>
           </ul>
         </div>
@@ -86,7 +89,10 @@ const Footer = () => {
           </a>
 
           {/* facebook */}
-          <a href="">
+          <a
+            href=""
+            className=" groub hover:scale-125 transition-all duration-100 ease-in-out hover:text-bgTertiary"
+          >
             {" "}
             <svg
               width="22"
@@ -105,7 +111,10 @@ const Footer = () => {
             </svg>
           </a>
           {/* instegram */}
-          <a href="">
+          <a
+            href=""
+            className=" groub hover:scale-125 transition-all duration-100 ease-in-out hover:text-bgTertiary"
+          >
             <svg
               width="22"
               height="22"
@@ -144,7 +153,10 @@ const Footer = () => {
             </svg>
           </a>
           {/* gmail */}
-          <a href="">
+          <a
+            href=""
+            className=" groub hover:scale-125 transition-all duration-100 ease-in-out hover:text-bgTertiary"
+          >
             <svg
               width="22"
               height="22"
@@ -176,7 +188,10 @@ const Footer = () => {
             </svg>
           </a>
           {/* phone */}
-          <a href="">
+          <a
+            href=""
+            className=" groub hover:scale-125 transition-all duration-100 ease-in-out hover:text-bgTertiary"
+          >
             <svg
               width="22"
               height="22"
@@ -216,10 +231,13 @@ const Footer = () => {
 
 export default Footer;
 
-const FooterLink = ({ children }) => {
+const FooterLink = ({ children, href }) => {
   return (
-    <li className=" md:text-sm text-xs flex items-center justify-center hover:font-semibold  hover:text-fontPri hover:scale-125 hover:text-bgTertiary h-full transition-all duration-100 ease-in-out ">
-      {children}
-    </li>
+    <a href={href}>
+      {" "}
+      <li className=" md:text-sm text-xs flex items-center justify-center hover:font-semibold  hover:text-fontPri hover:scale-125 hover:text-bgTertiary h-full transition-all duration-100 ease-in-out ">
+        {children}
+      </li>
+    </a>
   );
 };
