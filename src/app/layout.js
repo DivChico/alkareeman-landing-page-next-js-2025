@@ -18,11 +18,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${cairo.className} ${sstArabic.className}`}>
+    <html lang="en">
       <body className="antialiased">
-        <main className="container mx-auto text-center px-5 lg:px-32">
+        <main className={`${cairo.className} `}>
           <Header />
-          {children}
+          <div className="container mx-auto text-center px-5 lg:px-32">
+            {children}
+          </div>
           <Footer />
         </main>
       </body>

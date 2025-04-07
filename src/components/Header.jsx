@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="  flex justify-between gap-16 py-2  flex-row-reverse items-center">
+    <header className=" container mx-auto text-center px-5 lg:px-32 flex justify-between gap-16 py-2  flex-row-reverse items-center">
       {/* logo */}
       <div>
         <Image src="/logo.png" width={100} height={100} alt="Logo" />
