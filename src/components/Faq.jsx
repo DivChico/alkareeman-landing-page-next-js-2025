@@ -32,7 +32,7 @@ const Faq = () => {
       </h2>
       <div className="text-black px-4 md:px-20 w-full  flex flex-col items-end  space-y-8">
         {FaqData.map((item, index) => (
-          <div className="text-right space-y-4 max-w-5xl">
+          <div key={index} className="text-right space-y-4 max-w-5xl">
             <h3 className="  text-lg md:text-2xl ">{item.question}</h3>
             <p className="  text-md md:text-lg text-black/50 hover:text-black/75  transition-all duration-100 ease-in-out ">
               {item.answer}

@@ -1,10 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import { NavLink } from "./Header";
-
+import { Cairo } from "next/font/google";
+const cairo = Cairo({ subsets: ["latin"] });
 const Footer = () => {
   return (
-    <footer className=" relative bg-fontPrimary flex flex-col items-center pt-4 justify-between  px-5  lg:px-56">
+    <footer
+      className={` ${cairo.className} relative bg-fontPrimary flex flex-col items-center pt-4 justify-between  px-5  lg:px-56`}
+    >
       {/* links */}
       <div className=" w-full  md:gap-32   flex flex-row-reverse justify-between md:justify-start md:px-16 items-center">
         {/* lgoo and name */}
