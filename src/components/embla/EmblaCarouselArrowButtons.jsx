@@ -40,7 +40,7 @@ export const PrevButton = (props) => {
 
   return (
     <button
-      className="embla__button embla__button--prev"
+      className="embla__button embla__button--prev hover:scale-105 active:scale-95"
       type="button"
       {...restProps}
     >
@@ -85,7 +85,7 @@ export const NextButton = (props) => {
 
   return (
     <button
-      className="embla__button embla__button--next"
+      className="embla__button embla__button--next hover:scale-105 active:scale-95"
       type="button"
       {...restProps}
     >

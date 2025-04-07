@@ -33,14 +33,18 @@ const EmblaCarousel = (props) => {
       </div>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container ">
-          {slides.map((index) => (
+          {slides.map((testimonial, index) => (
             <div className="embla__slide " key={index}>
-              <TestimonialCard />
+              <TestimonialCard
+                name={testimonial.name}
+                image={testimonial.image}
+                testimonial={testimonial.testimonial}
+              />
             </div>
           ))}
         </div>
       </div>
-      <div className="hidden md:block absolute top-1/2 -left-20">
+      <div className="hidden  md:block absolute top-1/2 -left-20">
         <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
       </div>
       <div className="hidden md:block  absolute top-1/2 -right-20">
