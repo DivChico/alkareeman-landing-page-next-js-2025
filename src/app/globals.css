@@ -10,7 +10,7 @@
   --color-bgTertiary: #3c1c45;
   --color-fontPrimary: #d88909;
   --color-fontSecondary: #0d4e9b;
-  --color-fontTertiary: #00b3ff;
+  --color-fontTertiary: #d9d9d99e;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 }
