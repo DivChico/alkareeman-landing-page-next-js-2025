@@ -3,7 +3,7 @@ import React from "react";
 
 const Us = () => {
   return (
-    <section className="py-16 flex flex-col md:flex-row-reverse items-center justify-center gap-8 ">
+    <section className="py-16 flex flex-col md:flex-row-reverse items-center justify-center gap-4 md:gap-16 ">
       <div className="max-w-md space-y-4 text-right">
         {" "}
         <h2 className=" font-bold text-fontPrimary text-4xl">نحن</h2>

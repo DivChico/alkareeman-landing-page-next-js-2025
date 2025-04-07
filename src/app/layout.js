@@ -6,6 +6,7 @@ const cairo = Cairo({ subsets: ["latin"] });
 
 import localFont from "next/font/local";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 const sstArabic = localFont({
   src: "../../public/fonts/alfont_com_AlFont_com_SST-Arabic-Medium.ttf",
 });
@@ -23,6 +24,9 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <body className={` antialiased`}>{children}</body>
+      </div>
+      <div className="cairo.className">
+        <Footer />
       </div>
     </html>
   );
