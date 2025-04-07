@@ -20,9 +20,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="antialiased">
-        <main className={`${cairo.className} `}>
+        <main
+          className={`${cairo.className} min-h-screen flex justify-between  flex-col`}
+        >
           <Header />
-          <div className="container mx-auto text-center px-5 lg:px-32">
+          <div className="container mx-auto text-center px-5 lg:px-32 ">
             {children}
           </div>
           <Footer />

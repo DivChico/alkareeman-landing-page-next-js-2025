@@ -9,10 +9,10 @@ const Footer = () => {
       className={` ${cairo.className} relative bg-fontPrimary flex flex-col items-center pt-4 justify-between  px-5  lg:px-56`}
     >
       {/* links */}
-      <div className=" w-full  md:gap-32   flex flex-row-reverse justify-between md:justify-start md:px-16 items-center">
+      <div className=" w-full gap-2  md:gap-32   flex flex-row-reverse  md:justify-start md:px-16 items-center">
         {/* lgoo and name */}
 
-        <div className="flex justify-center items-center gap-4 ">
+        <div className="flex justify-center items-center gap-2 ">
           <div className=" text-2xl text-bgTertiary font-bold text-center">
             <p>التميز</p> <p>الرقمي</p>
           </div>
@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
         </div>
         {/* link */}
-        <div className=" flex  flex-col md:flex-row items-center justify-center gap-2 md:gap-20  lg:gap-32">
+        <div className="   flex  flex-row items-center justify-center gap-4 md:gap-20  lg:gap-32">
           <ul className="space-y-2">
             <li>
               <FooterLink>الصفحة الرئيسية</FooterLink>

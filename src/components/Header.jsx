@@ -13,7 +13,7 @@ const Header = () => {
           <NavLink>الصفحة الرئيسية</NavLink>
           <NavLink>نبذة عنا</NavLink>
           <NavLink>اطلب خدمة</NavLink>
-          <NavLink>قدم على وظيفة</NavLink>
+          <NavLink link={"/apply-job"}>قدم على وظيفة</NavLink>
           <NavLink>تواصل معنا</NavLink>
           <NavLink>السياسات والخصوصية</NavLink>
         </ul>
@@ -75,11 +75,13 @@ const Header = () => {
 
 export default Header;
 
-const NavLink = ({ children }) => {
+const NavLink = ({ children, link }) => {
   return (
-    <li className=" flex items-center justify-center border-bgSecondary hover:text-fontPrimary hover:scale-125 hover:border-b-2  h-full transition-all duration-100 ease-in-out ">
-      {children}
-    </li>
+    <a href={link}>
+      <li className=" flex items-center justify-center border-bgSecondary hover:text-fontPrimary hover:scale-125 hover:border-b-2  h-full transition-all duration-100 ease-in-out ">
+        {children}
+      </li>
+    </a>
   );
 };
 
