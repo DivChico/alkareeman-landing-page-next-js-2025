@@ -33,14 +33,14 @@ const Faq = () => {
       <div className="text-black px-4 md:px-20 w-full  flex flex-col items-end  space-y-8">
         {FaqData.map((item, index) => (
           <div className="text-right space-y-4 max-w-5xl">
-            <h3 className="  text-lg md:text-3xl ">{item.question}</h3>
-            <p className="  text-md md:text-2xl text-black/50 hover:text-black/75  transition-all duration-100 ease-in-out ">
+            <h3 className="  text-lg md:text-2xl ">{item.question}</h3>
+            <p className="  text-md md:text-lg text-black/50 hover:text-black/75  transition-all duration-100 ease-in-out ">
               {item.answer}
             </p>
           </div>
         ))}
       </div>
-      <div className=" hidden md:block w-1/12 h-5/6 rounded-tl-[180px] rounded-br-[200px] bg-bgTertiary absolute top-1/2 left-20 -translate-x-1/2 -translate-y-1/2 "></div>
+      <div className=" hidden md:block w-1/12 h-5/6 rounded-tl-[180px] rounded-br-[200px] bg-bgTertiary absolute top-1/2 left-10 lg:left-20 -translate-x-1/2 -translate-y-1/2 "></div>
     </section>
   );
 };
