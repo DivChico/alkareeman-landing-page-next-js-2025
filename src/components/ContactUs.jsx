@@ -20,7 +20,7 @@ const ContactUs = () => {
           </div>
           <a
             className=" self-center group rounded-tl-3xl  rounded-br-3xl relative inline-flex items-center overflow-hidden  font-bold bg-fontPrimary px-8 py-3 text-white focus:ring-3 focus:outline-hidden"
-            href="#"
+            href="/contact-us"
           >
             <span className="absolute -end-full transition-all group-hover:end-4">
               <svg

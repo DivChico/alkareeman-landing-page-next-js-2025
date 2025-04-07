@@ -6,16 +6,19 @@ const Header = () => {
     <header className=" container mx-auto text-center px-5 lg:px-32 flex justify-between gap-16 py-2  flex-row-reverse items-center">
       {/* logo */}
       <div>
-        <Image src="/logo.png" width={100} height={100} alt="Logo" />
+        <a href="/">
+          {" "}
+          <Image src="/logo.png" width={100} height={100} alt="Logo" />
+        </a>
       </div>
       <nav className="hidden md:block">
         <ul className="flex flex-row-reverse gap-6 text-sm px-2 py-4 h-16">
-          <NavLink>الصفحة الرئيسية</NavLink>
-          <NavLink>نبذة عنا</NavLink>
-          <NavLink>اطلب خدمة</NavLink>
+          <NavLink link={"/"}>الصفحة الرئيسية</NavLink>
+          <NavLink link={"#about-us"}>نبذة عنا</NavLink>
+          <NavLink link={"/contact-us"}>اطلب خدمة</NavLink>
           <NavLink link={"/apply-job"}>قدم على وظيفة</NavLink>
           <NavLink link={"/contact-us"}>تواصل معنا</NavLink>
-          <NavLink>السياسات والخصوصية</NavLink>
+          <NavLink link={"/privacy-policy"}>السياسات والخصوصية</NavLink>
         </ul>
       </nav>
       {/* lang */}

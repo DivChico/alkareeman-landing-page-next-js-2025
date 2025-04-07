@@ -27,10 +27,6 @@ const EmblaCarousel = (props) => {
 
   return (
     <section className="embla relative ">
-      <div className="flex  items-center justify-between md:hidden  ">
-        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-      </div>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container ">
           {slides.map((testimonial, index) => (
@@ -43,6 +39,10 @@ const EmblaCarousel = (props) => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="flex  items-center justify-between md:hidden  ">
+        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
       </div>
       <div className="hidden  md:block absolute top-1/2 -left-20">
         <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
