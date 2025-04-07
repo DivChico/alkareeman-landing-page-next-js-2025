@@ -14,7 +14,7 @@ const Header = () => {
           <NavLink>نبذة عنا</NavLink>
           <NavLink>اطلب خدمة</NavLink>
           <NavLink link={"/apply-job"}>قدم على وظيفة</NavLink>
-          <NavLink>تواصل معنا</NavLink>
+          <NavLink link={"/contact-us"}>تواصل معنا</NavLink>
           <NavLink>السياسات والخصوصية</NavLink>
         </ul>
       </nav>
