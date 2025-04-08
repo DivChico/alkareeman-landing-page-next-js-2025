@@ -74,7 +74,7 @@ const ApplyJobForm = ({ action }) => {
         placeholder=" رقم الهاتف "
         className="mt-0.5  min-w-xs   md:min-w-md bg-white text-black/80 text-right py-2 px-4 active:text-black  rounded border-gray-300 shadow-sm sm:text-sm"
       />
-      <div>
+      {/* <div>
         <div class="min-w-xs   md:min-w-md py-2 bg-gray-50 rounded border border-gray-300 gap-3 grid border-dashed">
           <div class="grid gap-1">
             <svg
@@ -111,6 +111,21 @@ const ApplyJobForm = ({ action }) => {
             </div>
           </div>
         </div>
+      </div> */}
+      <div
+        {...getRootProps()}
+        className="w-full md:min-w-md border-dashed border-2 border-gray-300 p-4 rounded cursor-pointer bg-gray-50 text-center"
+      >
+        <input {...getInputProps()} />
+        {isDragActive ? (
+          <p className="text-gray-500">Drop the file here ...</p>
+        ) : file ? (
+          <p className="text-green-600">{file.name}</p>
+        ) : (
+          <p className="text-gray-400">
+            اسحب ملف السيرة الذاتية أو اضغط هنا لرفعه (PDF / DOCX)
+          </p>
+        )}
       </div>
       <button
         type="submit"
