@@ -24,7 +24,7 @@ const FaqData = [
 ];
 const Faq = () => {
   return (
-    <section className=" relative py-8 md:py-24 bg-white w-full  my-8 rounded-tl-[50px] md:rounded-tl-[200px] rounded-br-[50px]  md:rounded-br-[200px] space-y-8">
+    <section className=" relative py-8 bg-white w-full  my-8 rounded-tl-[50px] md:rounded-tl-[200px] rounded-br-[50px]  md:rounded-br-[200px] space-y-8">
       <h2 className=" font-bold text-fontPrimary text-3xl md:text-4xl gap-2">
         <span>(FAQ) </span>
 
@@ -34,7 +34,7 @@ const Faq = () => {
         {FaqData.map((item, index) => (
           <div key={index} className="text-right space-y-4 max-w-5xl">
             <h3 className="  text-md md:text-xl ">{item.question}</h3>
-            <p className="  text-xs md:text-md text-black/50 hover:text-black/75  transition-all duration-100 ease-in-out ">
+            <p className="  text-xs md:text-md text-black/75 tracking-wide hover:text-black/75  transition-all duration-100 ease-in-out ">
               {item.answer}
             </p>
           </div>

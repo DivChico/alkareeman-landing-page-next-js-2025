@@ -1,10 +1,17 @@
 import Button from "@/components/Button";
+import ContactUsForm from "@/components/ContactUsForm";
 import Image from "next/image";
 import React from "react";
 
 const page = () => {
+  const action = async (prevState, formData) => {
+    "use server";
+
+    const { email, name, massage } = formData;
+    console.log(formData);
+  };
   return (
-    <section className=" relative  space-y-4 py-8 ">
+    <section className=" relative  space-y-4 py-8 tracking-wide ">
       <div className="  space-y-8">
         <h1 className=" font-semibold text-fontPrimary text-2xl">
           كيف يمكنك الوصول إلينا؟{" "}
@@ -35,7 +42,7 @@ const page = () => {
             <h2 className=" font-bold text-fontPrimary text-2xl text-center md:text-right">
               تواصل معنا{" "}
             </h2>
-            <div className=" flex items-center gap-2 flex-col ">
+            {/* <div className=" flex items-center gap-2 flex-col ">
               <input
                 type="text"
                 placeholder="الاسم رباعي"
@@ -55,7 +62,8 @@ const page = () => {
                 className="mt-0.5  min-w-xs  md:min-w-xs rounded-4xl  bg-bgSecondary/10 border border-bgSecondary text-black/80 text-right py-2 px-4 active:text-black    shadow-sm sm:text-sm"
               />
               <Button>إرسال الرسالة</Button>
-            </div>
+            </div> */}
+            <ContactUsForm action={action} />
           </div>
           <div className="absolute top-0 left-0 w-full h-full rounded-2xl border-8 border-fontPrimary transform  -rotate-2 -z-10"></div>
         </div>

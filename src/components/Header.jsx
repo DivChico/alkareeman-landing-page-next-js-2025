@@ -10,7 +10,13 @@ const Header = () => {
           <p className="font-semibold tracking-wide text-lg md:hidden">
             التميز الرقمي
           </p>{" "}
-          <Image src="/logo.png" width={50} height={50} alt="Logo" />
+          <Image
+            className=" "
+            src="/logo.png"
+            width={80}
+            height={50}
+            alt="Logo"
+          />
         </a>
       </div>
       <nav className="hidden md:block">

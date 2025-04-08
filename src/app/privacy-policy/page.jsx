@@ -56,8 +56,8 @@ const page = () => {
       <div className=" relative bg-white  rounded-4xl py-8 px-4 space-y-4">
         {policies.map((policy, index) => (
           <div className="text-right space-y-2">
-            <h2 className="  text-bgTertiary font-semibold">{policy.title}</h2>
-            <p className=" text-sm text-black/50 hover:text-black">
+            <h2 className="  text-bgTertiary font-bold">{policy.title}</h2>
+            <p className=" text-sm text-black/75 hover:text-black">
               {policy.desc}
             </p>
           </div>

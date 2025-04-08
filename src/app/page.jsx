@@ -9,7 +9,7 @@ import Us from "@/components/Us";
 
 export default function Home() {
   return (
-    <main>
+    <main className="tracking-wide">
       <Hero />
       <Features />
       <Us />
