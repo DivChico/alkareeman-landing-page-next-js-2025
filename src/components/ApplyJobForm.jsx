@@ -1,17 +1,39 @@
 "use client";
 
-import React, { useActionState } from "react";
+import React, { useActionState, useCallback } from "react";
 import Form from "next/form";
-import Button from "./Button";
+import { useDropzone } from "react-dropzone";
 import { Loader2 } from "lucide-react";
 const initialState = {
   message: "",
 };
 const ApplyJobForm = ({ action }) => {
   const [state, formAction, isPending] = useActionState(action, initialState);
+  const [file, setFile] = useState(null);
 
+  const onDrop = useCallback((acceptedFiles) => {
+    setFile(acceptedFiles[0]);
+  }, []);
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop,
+    multiple: false,
+    accept: {
+      "application/pdf": [],
+      "application/msword": [],
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+        [],
+    },
+  });
+
+  const handleSubmit = async (formData) => {
+    if (file) {
+      formData.append("cv", file);
+    }
+    formAction(formData); // submit to server action
+  };
   return (
-    <Form action={formAction} className="flex items-center gap-2 flex-col  ">
+    <Form action={handleSubmit} className="flex items-center gap-2 flex-col  ">
       <input
         type="text"
         name="name"
