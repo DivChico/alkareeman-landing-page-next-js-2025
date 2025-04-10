@@ -50,7 +50,7 @@ const Header = () => {
   }, [prevScrollY]);
   const NavLink = ({ children, link }) => {
     return (
-      <a href={link}>
+      <a href={link} onClick={() => setIsMenuOpen(false)}>
         <li
           className={`flex  items-center    justify-center border-bgSecondary hover:text-fontPrimary hover:scale-125 hover:border-b-2 h-full transition-all duration-100 ease-in-out ${
             isMenuOpen ? "text-black/75" : ""
