@@ -1,10 +1,21 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import Button from "./Button";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start end", "end start"],
+  });
+  const transulateY = useTransform(scrollYProgress, [0, 1], [300, -300]);
   return (
-    <section className=" flex flex-col md:flex-row-reverse items-center justify-center gap-8 py-4 md:py-16  relative">
+    <section
+      ref={heroRef}
+      className="relative  flex flex-col md:flex-row-reverse items-center justify-center gap-8 py-4 md:py-16  "
+    >
       <div className="max-w-md space-y-4">
         <p className=" font-semibold text-2xl text-fontPrimary">
           {" "}
@@ -17,12 +28,22 @@ const Hero = () => {
       <div>
         <Image src={"/heroimage.png"} width={700} height={700}></Image>
       </div>
-      <div className=" hidden md:absolute top-30  left-0 ">
+      <motion.dev
+        style={{
+          translateY: transulateY,
+        }}
+        className=" hidden md:block absolute top-30  left-0 "
+      >
         <Image src={"/Polygonleaft.png"} width={100} height={100}></Image>
-      </div>
-      <div className="hidden md:absolute top-60  right-0 ">
+      </motion.dev>
+      <motion.dev
+        style={{
+          translateY: transulateY,
+        }}
+        className="hidden md:block absolute top-60  right-0 "
+      >
         <Image src={"/Polygonright.png"} width={100} height={100}></Image>
-      </div>
+      </motion.dev>
     </section>
   );
 };

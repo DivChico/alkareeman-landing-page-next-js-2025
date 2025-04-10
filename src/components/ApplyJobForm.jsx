@@ -4,6 +4,7 @@ import React, { useActionState, useCallback, useState } from "react";
 import Form from "next/form";
 import { useDropzone } from "react-dropzone";
 import { Loader2 } from "lucide-react";
+import Image from "next/image";
 const initialState = {
   message: "",
 };
@@ -134,6 +135,22 @@ const ApplyJobForm = ({ action }) => {
           {state.message}
         </p>
       )}
+      <div className="hidden md:flex  absolute top-0 left-0">
+        <Image
+          alt="grapihcapply"
+          src={"/grapihcapply.png"}
+          width={100}
+          height={100}
+        />
+      </div>
+      <div className="hidden md:flex   absolute bottom-15 right-0">
+        <Image
+          alt="grapihcapply"
+          src={"/graphic2.png"}
+          width={100}
+          height={100}
+        />
+      </div>
     </Form>
   );
 };

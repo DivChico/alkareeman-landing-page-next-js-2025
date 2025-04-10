@@ -32,12 +32,6 @@ const page = () => {
         <div className="absolute top-0 left-0 w-full h-full rounded-tr-[150px] rounded-b-[150px] border-8 border-fontPrimary transform translate-y-[13px] -translate-x-[13px] -z-10"></div>
         <div className="absolute w-[92px] h-[116px] -top-5 left-10 bg-fontPrimary rounded-tr-[15px] rounded-b-[15px]"></div>
       </div>
-      <div className="hidden md:flex  absolute top-0 left-0">
-        <Image src={"/grapihcapply.png"} width={100} height={100} />
-      </div>
-      <div className="hidden md:flex   absolute bottom-15 right-0">
-        <Image src={"/graphic2.png"} width={100} height={100} />
-      </div>
     </section>
   );
 };
