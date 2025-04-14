@@ -52,7 +52,7 @@ const Header = () => {
     return (
       <a href={link} onClick={() => setIsMenuOpen(false)}>
         <li
-          className={`flex  items-center    justify-center border-bgSecondary hover:text-fontPrimary hover:scale-125 hover:border-b-2 h-full transition-all duration-100 ease-in-out ${
+          className={`flex  items-center text-lg     justify-center border-bgSecondary hover:text-fontPrimary hover:scale-125 hover:border-b-2 h-full transition-all duration-100 ease-in-out ${
             isMenuOpen ? "text-black/75" : ""
           }`}
         >
@@ -63,13 +63,13 @@ const Header = () => {
   };
   return (
     <header
-      className={`container sticky z-50 top-0     mx-auto text-center px-5 lg:px-32 flex justify-between gap-16 py-2 flex-row-reverse items-center backdrop-blur-lg transform transition-transform duration-300 ease-in-out ${
+      className={`container mx-auto sticky z-50 top-0 xl:px-16 px-2      text-center  flex justify-between gap-16 py-2 flex-row-reverse items-center backdrop-blur-lg transform transition-transform duration-300 ease-in-out ${
         isOpen ? "translate-y-0" : "-translate-y-full"
       }  `}
     >
       <div>
         <a href="/" className="flex justify-center items-center gap-2">
-          <p className="font-semibold tracking-wide text-lg md:hidden">
+          <p className="font-semibold text-white tracking-wide text-lg md:hidden">
             التميز الرقمي
           </p>{" "}
           <Image

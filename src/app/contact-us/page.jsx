@@ -17,11 +17,11 @@ const page = () => {
           كيف يمكنك الوصول إلينا؟{" "}
         </h1>
         <div className=" flex gap-8 justify-center items-center flex-col md:flex-row-reverse">
-          <div className="  px-16 py-4 bg-white text-black  flex  items-center justify-center rounded-tl-[200px] rounded-br-[200px] ">
+          <div className="  px-4 py-4 space-x-2 bg-white text-black  flex  items-center justify-center rounded-tl-[200px] rounded-br-[200px] ">
             <span>قلقيلية - عزون - شارع كفر ثلث - مقابل البريد</span>
-            <span className=" text-fontPrimary">:المكتب الرئيسي</span>
+            <span className=" text-fontPrimary ">:المكتب الرئيسي</span>
           </div>
-          <div className="px-16 py-4 bg-white text-black  flex  items-center justify-center rounded-tl-[200px] rounded-br-[200px] ">
+          <div className=" px-4 py-4 space-x-2 bg-white text-black  flex  items-center justify-center rounded-tl-[200px] rounded-br-[200px] ">
             <span> 0594919928</span>
             <span className=" text-fontPrimary">:الهاتف </span>
           </div>
@@ -29,10 +29,10 @@ const page = () => {
       </div>
       <div className=" space-y-8 flex items-center justify-center flex-col">
         <h2 className="flex  items-center justify-center">
-          <span className=" text-fontPrimary font-bold text-lg">
+          <span className=" text-fontPrimary font-bold text-sm ">
             املأ النموذج أدناه وسنتواصل معك خلال 24 ساعة!
           </span>
-          <span>💡 هل لديك مشروع برمجي؟</span>
+          <span>💡 هل لديك مشروع ؟</span>
         </h2>
         <div className=" relative bg-white pt-4  w-3xl flex flex-col-reverse md:flex-row justify-center items-center gap-8 rounded-2xl">
           <div>

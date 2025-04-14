@@ -24,7 +24,7 @@ const FaqData = [
 ];
 const Faq = () => {
   return (
-    <section className=" relative py-8 bg-white w-full  my-8 rounded-tl-[50px] md:rounded-tl-[200px] rounded-br-[50px]  md:rounded-br-[200px] space-y-8">
+    <section className="  relative   py-8 bg-white w-full  my-8 rounded-tl-[50px] md:rounded-tl-[200px] rounded-br-[50px]  md:rounded-br-[200px] space-y-8">
       <h2 className=" font-bold text-fontPrimary text-3xl md:text-4xl gap-2">
         <span>(FAQ) </span>
 
@@ -40,7 +40,7 @@ const Faq = () => {
           </div>
         ))}
       </div>
-      <div className=" hidden md:block w-1/12 h-5/6 rounded-tl-[180px] rounded-br-[200px] bg-bgTertiary absolute top-1/2 left-10 lg:left-20 -translate-x-1/2 -translate-y-1/2 "></div>
+      <div className=" hidden md:block w-1/12 h-5/6 rounded-tl-[50px] md:rounded-tl-[200px] rounded-br-[50px]  md:rounded-br-[200px] bg-bgTertiary absolute top-1/2 left-20 -translate-x-1/2 -translate-y-1/2 "></div>
     </section>
   );
 };

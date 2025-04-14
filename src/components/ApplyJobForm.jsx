@@ -77,7 +77,7 @@ const ApplyJobForm = ({ action }) => {
       />
       <div
         {...getRootProps()}
-        className="w-full min-w-xs  border-dashed border-2 border-gray-300 p-4 rounded cursor-pointer bg-gray-50 text-center"
+        className=" min-w-xs   md:min-w-md  border-dashed border-2 border-gray-300 p-4 rounded cursor-pointer bg-gray-50 text-center"
       >
         <input {...getInputProps()} />
         {isDragActive ? (
@@ -85,7 +85,7 @@ const ApplyJobForm = ({ action }) => {
         ) : file ? (
           <p className="text-green-600">{file.name}</p>
         ) : (
-          <div class="min-w-xs    py-2 bg-gray-50 rounded border border-gray-300 gap-3 grid border-dashed">
+          <div class="    py-2 bg-gray-50 rounded border border-gray-300 gap-3 grid border-dashed">
             <div class="grid gap-1">
               <svg
                 class="mx-auto "
@@ -135,22 +135,6 @@ const ApplyJobForm = ({ action }) => {
           {state.message}
         </p>
       )}
-      <div className="hidden md:flex  absolute top-0 left-0">
-        <Image
-          alt="grapihcapply"
-          src={"/grapihcapply.png"}
-          width={100}
-          height={100}
-        />
-      </div>
-      <div className="hidden md:flex   absolute bottom-15 right-0">
-        <Image
-          alt="grapihcapply"
-          src={"/graphic2.png"}
-          width={100}
-          height={100}
-        />
-      </div>
     </Form>
   );
 };

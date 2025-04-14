@@ -6,10 +6,10 @@ const cairo = Cairo({ subsets: ["latin"] });
 const Footer = () => {
   return (
     <footer
-      className={` ${cairo.className} relative bg-fontPrimary flex flex-col items-center pt-4 justify-between  px-5  lg:px-56`}
+      className={` ${cairo.className}  relative bg-fontPrimary flex flex-col items-center pt-4 justify-between px-2 md:px-0  `}
     >
       {/* links */}
-      <div className=" w-full gap-2  md:gap-32   flex flex-row-reverse  md:justify-start md:px-16 items-center">
+      <div className=" w-full gap-2  md:gap-32   flex flex-row-reverse  lg:justify-start justify-between md:px-16 items-center">
         {/* lgoo and name */}
 
         <div className="flex justify-center items-center gap-2 ">
@@ -223,7 +223,7 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <p>مواقع التواصل</p>
+        <p className="text-white">مواقع التواصل</p>
       </div>
     </footer>
   );
@@ -235,7 +235,7 @@ const FooterLink = ({ children, href }) => {
   return (
     <a href={href}>
       {" "}
-      <li className=" md:text-sm text-xs flex items-center justify-center hover:font-semibold  hover:text-fontPri hover:scale-125 hover:text-bgTertiary h-full transition-all duration-100 ease-in-out ">
+      <li className="  text-white  lg:text-lg flex items-center justify-center hover:font-semibold  hover:text-fontPri hover:scale-125 hover:text-bgTertiary h-full transition-all duration-100 ease-in-out ">
         {children}
       </li>
     </a>

@@ -16,13 +16,19 @@ const Hero = () => {
       ref={heroRef}
       className="relative  flex flex-col md:flex-row-reverse items-center justify-center gap-8 py-4 md:py-16  "
     >
-      <div className="max-w-md space-y-4">
+      <div className="max-w-md space-y-8">
         <p className=" font-semibold text-2xl text-fontPrimary">
           {" "}
           هل تبحث عن شريك رقمي يرفع مشروعك إلى المستوى التالي ؟
         </p>
-        <h1 className="font-bold text-2xl"> شركة الـتمـيـز الرقمي</h1>
-        <p> هي وجهتك المثالية لتحقيق النجاح الرقمي لأعمالك!</p>
+        <h1 className="font-bold text-2xl text-white">
+          {" "}
+          شركة الـتمـيـز الرقمي
+        </h1>
+        <p className="text-white">
+          {" "}
+          هي وجهتك المثالية لتحقيق النجاح الرقمي لأعمالك!
+        </p>
         <Button>إحجز إستشارتك الأن </Button>
       </div>
       <div>

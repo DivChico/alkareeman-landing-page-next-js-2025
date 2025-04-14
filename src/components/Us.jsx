@@ -10,7 +10,7 @@ const Us = () => {
       <div className="max-w-md space-y-4 text-right">
         {" "}
         <h2 className=" font-bold text-fontPrimary text-4xl">نحن</h2>
-        <p className="   leading-10 ">
+        <p className="   leading-10 text-whites text-2xl ">
           التميز الرقمي، نحن فريق من المحترفين في مجالات التسويق الرقمي،
           التصميم، وتطوير المشاريع. نعمل مع عملائنا بشكل شراكة لتحقيق أهدافهم
           التجارية وتحويل رؤاهم إلى واقع. نحن نسعى لتقديم حلول مبتكرة ومتكاملة
@@ -18,7 +18,7 @@ const Us = () => {
         </p>
       </div>
 
-      <div className="relative w-[300px] md:w-[600px]">
+      <div className="relative w-[300px] md:w-[500px]">
         <Image
           src="/usImage.jpg"
           className="rounded-2xl"

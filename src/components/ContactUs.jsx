@@ -3,17 +3,17 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <section className="py-8 md:py-16 space-y-16 flex flex-col md:flex-row-reverse items-center justify-center gap-4 md:gap-16">
+    <section className="my-8 md:my-16 space-y-16 flex flex-col md:flex-row-reverse items-center justify-center gap-4 md:gap-16">
       <div className="max-w-md  ">
-        <div className=" space-y-4 text-right">
+        <div className=" space-y-8 text-right">
           {" "}
-          <h2 className=" font-bold text-fontPrimary text-4xl">تواصل معنا</h2>
+          <h2 className=" font-bold text-fontPrimary  text-4xl">تواصل معنا</h2>
           <div className="space-y-2">
-            <p className="   leading-10 ">
+            <p className="   leading-10 text-white ">
               هل لديك فكرة ترغب في تطويرها؟ هل تحتاج إلى مساعدة في تسويق مشروعك؟
               نحن هنا لمساعدتك!
             </p>{" "}
-            <p className="   leading-10 ">
+            <p className="   leading-10 text-white ">
               اتصل بنا اليوم لتحصل على استشارة مجانية وابدأ رحلتك نحو النجاح
               الرقمي.{" "}
             </p>
@@ -41,7 +41,7 @@ const ContactUs = () => {
 
             <span className="text-lg font-medium transition-all group-hover:me-4 spapce-x-2">
               {" "}
-              <span> تواصل معنا الأن </span>
+              <span className="text-whites"> تواصل معنا الأن </span>
               <span className="text-2xl">📩</span>
             </span>
           </a>

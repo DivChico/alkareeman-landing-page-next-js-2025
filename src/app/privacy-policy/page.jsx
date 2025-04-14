@@ -42,11 +42,11 @@ const policies = [
 const page = () => {
   return (
     <section className=" space-y-16 py-4 flex flex-col justify-center items-center">
-      <div className=" ">
+      <div className="max-w-4xl ">
         <h1 className=" font-bold text-fontPrimary text-lg lg:text-2xl text-center xl:text-right ">
           سياساتنا وشروطنا {" "}
         </h1>
-        <p className=" leading-8 text-sm lg:text-md text">
+        <p className=" leading-8  text-sm lg:text-md text-white">
           نحن في التميز الرقمي نحرص على تقديم أفضل الخدمات لعملائنا الكرام.
           لضمان سير العمل بكل شفافية ووضوح، نود أن نوضح بعض السياسات والشروط
           التي تحكم التعاملات بيننا وبين عملائنا. يُرجى قراءة هذه الشروط بعناية
@@ -74,7 +74,7 @@ const page = () => {
         <h1 className=" font-bold text-fontPrimary text-lg lg:text-2xl text-center">
           شكرًا لاختيارك التمـيـز الرقمي!{" "}
         </h1>
-        <p className=" leading-8 text-sm lg:text-md ">
+        <p className=" leading-8 text-sm lg:text-md  text-white ">
           نحن هنا لضمان تقديم أفضل الخدمات لك. إذا كانت لديك أي استفسارات حول
           سياساتنا أو شروطنا، لا تتردد في الاتصال بنا
         </p>

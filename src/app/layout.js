@@ -19,12 +19,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className="antialiased ">
         <main
-          className={`${cairo.className} min-h-screen flex justify-between  flex-col`}
+          className={`${cairo.className}    min-h-screen flex justify-between  flex-col `}
         >
           <Header />
-          <div className="container mx-auto text-center px-5 lg:px-32 ">
+          <div className="  text-center container  mx-auto xl:px-16 ">
             {children}
           </div>
           <Footer />
