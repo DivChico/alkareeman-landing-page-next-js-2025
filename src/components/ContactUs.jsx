@@ -3,7 +3,7 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <section className="my-8 md:my-16 space-y-16 flex flex-col md:flex-row-reverse items-center justify-center gap-4 md:gap-16">
+    <section className="my-8 md:my-16 px-8 md:px-0 space-y-16 flex flex-col md:flex-row-reverse items-center justify-center gap-4 md:gap-16">
       <div className="max-w-md  ">
         <div className=" space-y-8 text-right">
           {" "}

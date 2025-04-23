@@ -34,7 +34,7 @@ const page = () => {
           </span>
           <span>💡 هل لديك مشروع ؟</span>
         </h2>
-        <div className=" relative bg-white pt-4  w-3xl flex flex-col-reverse md:flex-row justify-center items-center gap-8 rounded-2xl">
+        <div className=" overflow-hidden  md:overflow-visible w-full  relative bg-white pt-4  md:w-3xl flex flex-col-reverse md:flex-row justify-center items-center gap-8 rounded-2xl">
           <div>
             <Image src={"/askservice.jpg"} width={300} height={300} />
           </div>

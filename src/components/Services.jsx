@@ -68,7 +68,7 @@ const Services = () => {
       <h2 className="font-bold text-4xl text-center text-fontPrimary">
         الخدمات التي نقدمها
       </h2>
-      <div className="flex items-center justify-center flex-wrap gap-16  ju">
+      <div className=" gap-8  grid  grid-cols-2 md:flex md:items-center md:justify-center md:flex-wrap  md:gap-16 justify-items-center  justify-center">
         {SERVICES.map((service, index) => (
           <ServiceCard
             text={service.text}
