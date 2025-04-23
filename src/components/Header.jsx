@@ -63,7 +63,7 @@ const Header = () => {
   };
   return (
     <header
-      className={`container mx-auto sticky z-50 top-0 xl:px-16 px-2      text-center  flex justify-between gap-16 py-2 flex-row-reverse items-center backdrop-blur-lg transform transition-transform duration-300 ease-in-out ${
+      className={`container mx-auto sticky z-50 top-0 xl:px-16 px-2      text-center  flex justify-between gap-16 py-2 flex-row-reverse items-center backdrop-blur-lg transform transition-transform duration-500 ease-in-out ${
         isOpen ? "translate-y-0" : "-translate-y-full"
       }  `}
     >
@@ -153,7 +153,7 @@ const Header = () => {
       {isMenuOpen && (
         <nav
           ref={menuRef}
-          className={`md:hidden absolute top-16 right-0 bg-white w-full shadow-lg p-5 z-10 overflow-hidden transition-all duration-300 ease-in-out transform ${
+          className={`md:hidden absolute top-16 right-0 bg-white w-full shadow-lg p-5 z-10 overflow-hidden transition-all duration-500 ease-in-out transform ${
             isMenuOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
         >

@@ -11,7 +11,7 @@ const ServiceCard = ({ image, text, backText }) => {
         <p className="text-black">{text}</p>
       </div>
       <div className="w-full h-full transform translate-y-[-17px] -rotate-6 rounded-2xl absolute top-0 left-0 -z-10 bg-fontPrimary"></div>
-      <div className="w-full h-full flex items-center justify-center group-hover:scale-105   rounded-2xl absolute top-0 left-0 -z-10 group-hover:z-1 bg-bgTertiary shadow-sm border-black transition-all duration-300  ease-in-out ">
+      <div className="w-full h-full flex items-center justify-center group-hover:scale-105   rounded-2xl absolute top-0 left-0 -z-10 group-hover:z-1 bg-bgTertiary shadow-sm border-black transition-all duration-500  ease-in-out ">
         <p className=" leading-6">{backText}</p>
       </div>
     </div>
