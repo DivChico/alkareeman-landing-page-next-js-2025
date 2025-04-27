@@ -1,14 +1,23 @@
 {
-    "Homepage": {
-        "heroTitle": "مرحبًا بك في موقعنا",
-        "description": "هذا هو الوصف الرئيسي لموقعنا."
-    },
-    "Navbar": {
-        "home": "الرئيسية",
-        "about": "حول",
-        "contact": "اتصل بنا",
-        "requestservice": "اطلب خدمة",
-        "applyjob": "المدونة",
-        "privacy": "سياسة الخصوصية"
-    }
+  "Homepage": {
+    "hero": "مرحبًا بك في موقعنا",
+    "description": "هذا هو الوصف الرئيسي لموقعنا."
+  },
+  "Navbar": {
+    "home": "الرئيسية",
+    "about": "حول",
+    "contact": "اتصل بنا",
+    "requestservice": "اطلب خدمة",
+    "applyjob": "المدونة",
+    "privacy": "سياسة الخصوصية"
+  },
+  "header": {
+    "home": "الصفحة الرئيسية",
+    "aboutUs": "نبذة عنا",
+    "requestService": "اطلب خدمة",
+    "applyJob": "قدم على وظيفة",
+    "contactUs": "تواصل معنا",
+    "privacyPolicy": "السياسات والخصوصية",
+    "companyName": "التميز الرقمي"
+  }
 }

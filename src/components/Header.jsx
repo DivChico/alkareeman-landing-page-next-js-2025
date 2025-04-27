@@ -1,10 +1,12 @@
 "use client";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 
 const Header = ({ locale }) => {
   const oppositeLocale = locale === "ar" ? "en" : "ar";
+  const t = useTranslations("header");
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
@@ -29,6 +31,7 @@ const Header = ({ locale }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -51,11 +54,12 @@ const Header = ({ locale }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollY]);
+
   const NavLink = ({ children, link }) => {
     return (
       <a href={link} onClick={() => setIsMenuOpen(false)}>
         <li
-          className={`flex  items-center text-lg     justify-center border-bgSecondary hover:text-fontPrimary hover:scale-125 hover:border-b-2 h-full transition-all duration-100 ease-in-out ${
+          className={`flex items-center text-lg justify-center border-bgSecondary hover:text-fontPrimary hover:scale-125 hover:border-b-2 h-full transition-all duration-100 ease-in-out ${
             isMenuOpen ? "text-black/75" : ""
           }`}
         >
@@ -65,37 +69,35 @@ const Header = ({ locale }) => {
     );
   };
 
-  console.log(locale);
-
   return (
     <header
-      className={`container mx-auto sticky z-50 top-0 xl:px-16 px-2      text-center  flex justify-between gap-16 py-2 flex-row-reverse items-center backdrop-blur-lg transform transition-transform duration-500 ease-in-out ${
+      className={`container mx-auto sticky z-50 top-0 xl:px-16 px-2 text-center flex justify-between gap-16 py-2 ${
+        locale === "ar" ? "flex-row-reverse" : ""
+      } items-center backdrop-blur-lg transform transition-transform duration-500 ease-in-out ${
         isOpen ? "translate-y-0" : "-translate-y-full"
-      }  `}
+      }`}
     >
       <div>
         <a href="/" className="flex justify-center items-center gap-2">
           <p className="font-semibold text-white tracking-wide text-lg md:hidden">
-            التميز الرقمي
-          </p>{" "}
-          <Image
-            className=""
-            src="/logo.png"
-            width={80}
-            height={50}
-            alt="Logo"
-          />
+            {locale === "ar" ? "التميز الرقمي" : "Digital Excellence"}
+          </p>
+          <Image src="/logo.png" width={80} height={50} alt="Logo" />
         </a>
       </div>
 
       <nav className="hidden md:block">
-        <ul className="flex flex-row-reverse gap-6 text-sm px-2 py-4 h-16">
-          <NavLink link={"/"}>الصفحة الرئيسية</NavLink>
-          <NavLink link={"#about-us"}>نبذة عنا</NavLink>
-          <NavLink link={"/contact-us"}>اطلب خدمة</NavLink>
-          <NavLink link={"/apply-job"}>قدم على وظيفة</NavLink>
-          <NavLink link={"/contact-us"}>تواصل معنا</NavLink>
-          <NavLink link={"/privacy-policy"}>السياسات والخصوصية</NavLink>
+        <ul
+          className={`flex ${
+            locale === "ar" ? "flex-row-reverse" : ""
+          } gap-6 text-sm px-2 py-4 h-16`}
+        >
+          <NavLink link="/">{t("home")}</NavLink>
+          <NavLink link="#about-us">{t("aboutUs")} </NavLink>
+          <NavLink link="/contact-us">{t("requestService")} </NavLink>
+          <NavLink link="/apply-job">{t("applyJob")} </NavLink>
+          <NavLink link="/contact-us">{t("contactUs")} </NavLink>
+          <NavLink link="/privacy-policy">{t("privacyPolicy")} </NavLink>
         </ul>
       </nav>
 
@@ -131,7 +133,7 @@ const Header = ({ locale }) => {
         </svg>
         <Link href={`/${oppositeLocale}`}>
           {locale === "ar" ? "English" : "اللغة العربية"}
-        </Link>{" "}
+        </Link>
       </div>
 
       <button
@@ -167,7 +169,7 @@ const Header = ({ locale }) => {
         >
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="absolute top-4 left-4 text-gray-600 hover:bg-gray-100 rounded-full p-2 hover:text-red-500 hover:scale-105 active:scale-95 z-10 "
+            className="absolute top-4 left-4 text-gray-600 hover:bg-gray-100 rounded-full p-2 hover:text-red-500 hover:scale-105 active:scale-95 z-10"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -185,12 +187,12 @@ const Header = ({ locale }) => {
             </svg>
           </button>
           <ul className="flex flex-col gap-4 text-center text-lg">
-            <NavLink link={"/"}>الصفحة الرئيسية</NavLink>
-            <NavLink link={"#about-us"}>نبذة عنا</NavLink>
-            <NavLink link={"/contact-us"}>اطلب خدمة</NavLink>
-            <NavLink link={"/apply-job"}>قدم على وظيفة</NavLink>
-            <NavLink link={"/contact-us"}>تواصل معنا</NavLink>
-            <NavLink link={"/privacy-policy"}>السياسات والخصوصية</NavLink>
+            <NavLink link="/">{t("home")}</NavLink>
+            <NavLink link="#about-us">{t("aboutUs")} </NavLink>
+            <NavLink link="/contact-us">{t("requestService")} </NavLink>
+            <NavLink link="/apply-job">{t("applyJob")} </NavLink>
+            <NavLink link="/contact-us">{t("contactUs")} </NavLink>
+            <NavLink link="/privacy-policy">{t("privacyPolicy")} </NavLink>
           </ul>
         </nav>
       )}
