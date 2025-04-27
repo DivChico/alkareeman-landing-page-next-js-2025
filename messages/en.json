@@ -18,5 +18,11 @@
     "requestService": "Request Service",
     "applyJob": "Apply for a Job",
     "privacyPolicy": "Privacy Policy"
+  },
+  "hero": {
+    "title": "Are you looking for a digital partner to take your project to the next level?",
+    "description": "It’s your perfect destination to achieve digital success for your business!",
+    "name": "The Digital Excellence Company",
+    "button": "Book your consultation now!"
   }
 }

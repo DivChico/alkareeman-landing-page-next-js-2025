@@ -7,10 +7,12 @@ import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import Us from "@/components/Us";
 
-export default function Home() {
+export default function Home({ params }) {
+  const { locale } = params;
+
   return (
     <main className="tracking-wide">
-      <Hero />
+      <Hero locale={locale} />
       <Features />
       <Us />
       <Services />
