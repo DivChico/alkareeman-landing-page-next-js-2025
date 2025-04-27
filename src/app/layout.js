@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import { routing } from "@/i18n/routing";
 
 import { Cairo } from "next/font/google";
 const cairo = Cairo({ subsets: ["latin"] });
@@ -17,9 +18,11 @@ export const metadata = {
   description: "شركة الـتمـيـز الرقمي",
 };
 
-export default async function RootLayout({ children }) {
+export default async function RootLayout({ children, params }) {
+  const { locale } = await params;
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className="antialiased ">
         <main
           className={`${cairo.className}    min-h-screen flex justify-between  flex-col `}
