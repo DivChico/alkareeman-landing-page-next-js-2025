@@ -7,6 +7,7 @@ import { Cairo } from "next/font/google";
 const cairo = Cairo({ subsets: ["latin"] });
 
 import localFont from "next/font/local";
+import { NextIntlClientProvider } from "next-intl";
 const sstArabic = localFont({
   src: "../../public/fonts/alfont_com_AlFont_com_SST-Arabic-Medium.ttf",
 });
@@ -16,7 +17,7 @@ export const metadata = {
   description: "شركة الـتمـيـز الرقمي",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="antialiased ">

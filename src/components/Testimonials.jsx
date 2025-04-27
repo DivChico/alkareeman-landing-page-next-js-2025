@@ -26,7 +26,7 @@ const SLIDES = [
 
 const Testimonials = () => {
   return (
-    <section className="my-8 md:my-16 space-y-16 ">
+    <section className="my-8 md:my-16 space-y-16 md:px-4 ">
       <h2 className="font-bold text-4xl text-center text-fontPrimary">
         أراء العملاء{" "}
       </h2>
