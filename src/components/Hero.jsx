@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import Button from "./Button";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -11,6 +12,7 @@ const Hero = () => {
     offset: ["start end", "end start"],
   });
   const transulateY = useTransform(scrollYProgress, [0, 1], [300, -300]);
+
   return (
     <section
       ref={heroRef}

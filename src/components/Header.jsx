@@ -1,8 +1,11 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 
-const Header = () => {
+const Header = ({ locale }) => {
+  const oppositeLocale = locale === "ar" ? "en" : "ar";
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
 
@@ -61,6 +64,9 @@ const Header = () => {
       </a>
     );
   };
+
+  console.log(locale);
+
   return (
     <header
       className={`container mx-auto sticky z-50 top-0 xl:px-16 px-2      text-center  flex justify-between gap-16 py-2 flex-row-reverse items-center backdrop-blur-lg transform transition-transform duration-500 ease-in-out ${
@@ -123,7 +129,9 @@ const Header = () => {
             strokeLinejoin="round"
           />
         </svg>
-        <p>اللغة العربية</p>
+        <Link href={`/${oppositeLocale}`}>
+          {locale === "ar" ? "English" : "اللغة العربية"}
+        </Link>{" "}
       </div>
 
       <button
