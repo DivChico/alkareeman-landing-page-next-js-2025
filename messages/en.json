@@ -17,7 +17,8 @@
     "contactUs": "Contact Us",
     "requestService": "Request Service",
     "applyJob": "Apply for a Job",
-    "privacyPolicy": "Privacy Policy"
+    "privacyPolicy": "Privacy Policy",
+    "companyName": "Digital Excellence"
   },
   "hero": {
     "title": "Are you looking for a digital partner to take your project to the next level?",
@@ -77,6 +78,7 @@
     "buttonText": "Contact Us"
   },
   "faq": {
+    "title": "Frequently Asked Questions",
     "questionOne": "What services do you offer?",
     "answerOne": "We offer a wide range of digital and software services including: page management, graphic design, podcast production, UI/UX design, content writing, marketing strategy development, advertising campaign management, and website and e-commerce store development.",
 
@@ -88,5 +90,9 @@
 
     "questionFour": "Do you work with small businesses and individuals?",
     "answerFour": "Absolutely! We offer solutions tailored for all types of businesses, from individuals and startups to large enterprises."
+  },
+  "footer": {
+    "copyWrite": "All rights reserved to Digital Excellence Company 2025",
+    "socialMedia": " Follow us on social media"
   }
 }

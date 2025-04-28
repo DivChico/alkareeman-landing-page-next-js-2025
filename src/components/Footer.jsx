@@ -2,8 +2,12 @@ import Image from "next/image";
 import React from "react";
 import { NavLink } from "./Header";
 import { Cairo } from "next/font/google";
+import { useTranslations } from "next-intl";
 const cairo = Cairo({ subsets: ["latin"] });
 const Footer = () => {
+  const t = useTranslations("header");
+  const f = useTranslations("footer");
+
   return (
     <footer
       className={` ${cairo.className}  relative bg-fontPrimary flex flex-col items-center pt-4 justify-between px-2 md:px-0  `}
@@ -14,7 +18,7 @@ const Footer = () => {
 
         <div className="flex justify-center items-center gap-2 ">
           <div className=" text-2xl text-bgTertiary font-bold text-center">
-            <p>التميز</p> <p>الرقمي</p>
+            {t("companyName")}
           </div>
           <div>
             <Image src={"/logo.png"} width={80} height={80} />
@@ -24,26 +28,29 @@ const Footer = () => {
         <div className="   flex  flex-row items-center justify-center gap-4 md:gap-20  lg:gap-32">
           <ul className="space-y-2">
             <li>
-              <FooterLink href={"/"}>الصفحة الرئيسية</FooterLink>
+              <FooterLink href={"/"}>{t("home")} </FooterLink>
             </li>
             <li>
-              <FooterLink href={"#about-us"}>نبذة عنا</FooterLink>
+              <FooterLink href={"#about-us"}>{t("aboutUs")} </FooterLink>
             </li>
             <li>
-              <FooterLink href={"/contact-us"}>اطلب الخدمة</FooterLink>
+              <FooterLink href={"/apply-job"}>{t("applyJob")} </FooterLink>
             </li>
           </ul>
           <ul className="space-y-2">
             <li>
-              <FooterLink href={"/apply-job"}> قدم على وظيفة</FooterLink>
+              <FooterLink href={"/contact-us"}>
+                {" "}
+                {t("requestService")}{" "}
+              </FooterLink>
             </li>
             <li>
-              <FooterLink href={"/contact-us"}>تواصل معنا </FooterLink>
+              <FooterLink href={"/contact-us"}> {t("contactUs")} </FooterLink>
             </li>
             <li>
               <FooterLink href={"/privacy-policy"}>
                 {" "}
-                سياساتنا وشروطنا
+                {t("privacyPolicy")}
               </FooterLink>
             </li>
           </ul>
@@ -51,9 +58,7 @@ const Footer = () => {
       </div>
       {/* copywright */}
       <div>
-        <p className="text-white/50 text-sm py-4">
-          حقوق النشر محفوظة لشركة التميز الرقمي 2025{" "}
-        </p>
+        <p className="text-white/50 text-sm py-4">{f("copyWrite")} </p>
       </div>
       {/* socila media */}
       <div className="flex justify-center w-full lg:w-2/5 py-2 rounded-tr-[20px] rounded-tl-[20px] lg:rounded-tl-[0px]  lg:rounded-tr-[200px] items-center gap-16 absolute bottom-0 left-0 bg-bgTertiary ">
@@ -90,7 +95,8 @@ const Footer = () => {
 
           {/* facebook */}
           <a
-            href=""
+            href="https://www.facebook.com/share/1J25BsSaDP/?mibextid=wwXIfr"
+            target="_blank"
             className=" groub hover:scale-125 transition-all duration-100 ease-in-out hover:text-bgTertiary"
           >
             {" "}
@@ -112,7 +118,8 @@ const Footer = () => {
           </a>
           {/* instegram */}
           <a
-            href=""
+            href="https://www.instagram.com/lrqmyltmyz?igsh=cXIyNXppc3dpeWM2"
+            target="_blank"
             className=" groub hover:scale-125 transition-all duration-100 ease-in-out hover:text-bgTertiary"
           >
             <svg
@@ -155,6 +162,7 @@ const Footer = () => {
           {/* gmail */}
           <a
             href=""
+            target="_blank"
             className=" groub hover:scale-125 transition-all duration-100 ease-in-out hover:text-bgTertiary"
           >
             <svg
@@ -190,6 +198,7 @@ const Footer = () => {
           {/* phone */}
           <a
             href=""
+            target="_blank"
             className=" groub hover:scale-125 transition-all duration-100 ease-in-out hover:text-bgTertiary"
           >
             <svg
@@ -223,7 +232,7 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-        <p className="text-white">مواقع التواصل</p>
+        <p className="text-white"> {f("socialMedia")}</p>
       </div>
     </footer>
   );
