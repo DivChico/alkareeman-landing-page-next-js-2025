@@ -1,5 +1,6 @@
 import React from "react";
 import EmblaCarousel from "./embla/EmblaCarousel";
+import { useTranslations } from "next-intl";
 
 // EmblaCarousel options
 const OPTIONS = { loop: true };
@@ -22,10 +23,11 @@ const SLIDES = [
 ];
 
 const Testimonials = () => {
+  const t = useTranslations("testimonials");
   return (
     <section className="my-8 md:my-16 space-y-16 md:px-4 ">
       <h2 className="font-bold text-4xl text-center text-fontPrimary">
-        أراء العملاء{" "}
+        {t("title")}{" "}
       </h2>
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
     </section>

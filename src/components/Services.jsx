@@ -1,72 +1,68 @@
 import React from "react";
 import ServiceCard from "./ServiceCard";
 import Button from "./Button";
-
-const SERVICES = [
-  {
-    text: "ادارة الصفحات",
-    image: "/s1.png",
-    backText:
-      "نساعدك على بناء حضور قوي وفعال على منصات التواصل الاجتماعي، من خلال إدارة الصفحات والتفاعل مع جمهورك بطريقة احترافية",
-  },
-  {
-    text: "بناء خطط تسويقية شاملة",
-    image: "/s2.png",
-    backText:
-      "نساعدك على وضع خطط تسويقية فعالة تساهم في الوصول إلى جمهورك المستهدف وتحقيق أهدافك التجارية.",
-  },
-  {
-    text: "إدارة الحملات الإعلانية",
-    image: "/s3.png",
-    backText:
-      "نقدم لك خدمات إدارة حملات إعلانية على منصات متعددة لزيادة التفاعل وتحقيق أفضل النتائج.",
-  },
-  {
-    text: "تصميم UI/UX",
-    image: "/s4.png",
-    backText: "نصمم لك واجهات استخدام مريحة وجذابة تضمن أفضل تجربة للمستخدم.",
-  },
-  {
-    text: "بناء المتاجر والمواقع الإلكترونية",
-    image: "/s5.png",
-    backText:
-      "نساعدك في بناء متجر أو موقع إلكتروني يتناسب مع احتياجاتك التجارية ويوفر تجربة سلسة للمستخدم.",
-  },
-  {
-    text: "تصميم الجرافيك",
-    image: "/s6.png",
-    backText: "نقدم لك تصاميم جرافيك مبتكرة لتمثيل علامتك التجارية بشكل مميز.",
-  },
-  {
-    text: "كتابة المحتوى",
-    image: "/s7.png",
-    backText: "نكتب محتوى احترافي يعكس رؤيتك ويساهم في جذب جمهورك المستهدف.",
-  },
-  {
-    text: "دورات تدريبية في تطوير المشاريع وريادة الأعمال",
-    image: "/s8.png",
-    backText:
-      "نقدم دورات تدريبية متخصصة في تطوير المشاريع الريادية وتنمية مهارات ريادة الأعمال.",
-  },
-  {
-    text: "تصوير البودكاست",
-    image: "/s9.png",
-    backText:
-      "نقدم خدمة تصوير وتنفيذ البودكاست بشكل احترافي مع جودة صوت وصورة عالية.",
-  },
-  {
-    text: "إدارة المبيعات",
-    image: "/s10.png",
-    backText:
-      "نساعدك في تحسين إدارة المبيعات وتقديم استراتيجيات فعالة لزيادة الإيرادات.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const Services = () => {
+  const t = useTranslations("services");
+
+  const SERVICES = [
+    {
+      text: t("managePagesText"),
+      image: "/s1.png",
+      backText: t("managePagesBackText"),
+    },
+    {
+      text: t("marketingPlansText"),
+      image: "/s2.png",
+      backText: t("marketingPlansBackText"),
+    },
+    {
+      text: t("campaignManagementText"),
+      image: "/s3.png",
+      backText: t("campaignManagementBackText"),
+    },
+    {
+      text: t("uiuxDesignText"),
+      image: "/s4.png",
+      backText: t("uiuxDesignBackText"),
+    },
+    {
+      text: t("websiteDevelopmentText"),
+      image: "/s5.png",
+      backText: t("websiteDevelopmentBackText"),
+    },
+    {
+      text: t("graphicDesignText"),
+      image: "/s6.png",
+      backText: t("graphicDesignBackText"),
+    },
+    {
+      text: t("contentWritingText"),
+      image: "/s7.png",
+      backText: t("contentWritingBackText"),
+    },
+    {
+      text: t("trainingCoursesText"),
+      image: "/s8.png",
+      backText: t("trainingCoursesBackText"),
+    },
+    {
+      text: t("podcastProductionText"),
+      image: "/s9.png",
+      backText: t("podcastProductionBackText"),
+    },
+    {
+      text: t("salesManagementText"),
+      image: "/s10.png",
+      backText: t("salesManagementBackText"),
+    },
+  ];
+
   return (
     <section className="py-16   space-y-16">
       <h2 className="font-bold text-4xl text-center text-fontPrimary">
-        الخدمات التي نقدمها
+        {t("title")}
       </h2>
       <div className=" gap-8  grid  grid-cols-2 md:flex md:items-center md:justify-center md:flex-wrap  md:gap-16 justify-items-center  justify-center">
         {SERVICES.map((service, index) => (
@@ -79,7 +75,7 @@ const Services = () => {
           />
         ))}
       </div>
-      <Button>اطلب خدمتك الأن</Button>
+      <Button> {t("buttonText")}</Button>
     </section>
   );
 };

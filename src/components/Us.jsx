@@ -1,20 +1,26 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
 const Us = () => {
+  const t = useTranslations("about");
+
   return (
     <section
       id="about-us"
-      className="py-16 flex flex-col md:flex-row-reverse items-center justify-center gap-4 md:gap-16 "
+      className={`py-16 flex flex-col ${
+        t("title") === "Who We Are" ? "md:flex-row" : "md:flex-row-reverse"
+      } items-center justify-center gap-4 md:gap-24  `}
     >
-      <div className="max-w-md space-y-4 text-center mb-4 md:text-right">
+      <div
+        className={`max-w-md space-y-4 text-center mb-4 ${
+          t("title") === "Who We Are" ? "md:text-left" : "md:text-right"
+        } `}
+      >
         {" "}
-        <h2 className=" font-bold text-fontPrimary text-4xl">نحن</h2>
+        <h2 className=" font-bold text-fontPrimary text-4xl"> {t("title")}</h2>
         <p className="   leading-10 text-whites text-2xl ">
-          التميز الرقمي، نحن فريق من المحترفين في مجالات التسويق الرقمي،
-          التصميم، وتطوير المشاريع. نعمل مع عملائنا بشكل شراكة لتحقيق أهدافهم
-          التجارية وتحويل رؤاهم إلى واقع. نحن نسعى لتقديم حلول مبتكرة ومتكاملة
-          تساعدك على النجاح في عالم الأعمال الرقمي المتسارع،
+          {t("description")}
         </p>
       </div>
 

@@ -4,7 +4,7 @@ import React from "react";
 const ServiceCard = ({ image, text, backText }) => {
   return (
     <div className="h-[180px] w-[150px] md:w-[300px] relative  rounded-2xl group cursor-pointer ">
-      <div className="w-full h-full bg-white flex  flex-col md:flex-row-reverse items-center justify-center rounded-2xl gap-2">
+      <div className="w-full h-full bg-white flex  flex-col  items-center justify-center rounded-2xl gap-2">
         <div>
           <Image src={image} width={70} height={100} />
         </div>

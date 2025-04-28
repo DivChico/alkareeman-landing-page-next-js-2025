@@ -24,5 +24,69 @@
     "description": "It’s your perfect destination to achieve digital success for your business!",
     "name": "The Digital Excellence Company",
     "button": "Book your consultation now!"
+  },
+  "features": {
+    "support": "Continuous Technical Support – We provide ongoing support to ensure your projects run smoothly, with timely updates and enhancements whenever needed.",
+    "technology": "Cutting-Edge Technology – We leverage the latest tools and technologies to deliver high performance, robust security, and seamless system integration.",
+    "delivery": "On-Time Delivery – We are committed to delivering high-quality projects within the agreed timeline, ensuring your business goals stay on track."
+  },
+  "about": {
+    "title": "Who We Are",
+    "description": "At Digital Excellence, we are a team of seasoned professionals specializing in digital marketing, design, and project development. We partner closely with our clients to achieve their business goals and bring their visions to life. Our mission is to deliver innovative, integrated solutions that empower you to succeed in today’s fast-paced digital world."
+  },
+  "services": {
+    "title": "Our Services",
+    "buttonText": "Request Your Service Now!",
+    "managePagesText": "Social Media Management",
+    "managePagesBackText": "We help you build a strong and effective presence on social media platforms by managing your pages and engaging with your audience professionally.",
+
+    "marketingPlansText": "Comprehensive Marketing Plans",
+    "marketingPlansBackText": "We assist you in creating effective marketing strategies that help reach your target audience and achieve your business goals.",
+
+    "campaignManagementText": "Campaign Management",
+    "campaignManagementBackText": "We offer campaign management services across multiple platforms to boost engagement and deliver optimal results.",
+
+    "uiuxDesignText": "UI/UX Design",
+    "uiuxDesignBackText": "We design user-friendly and attractive interfaces that ensure the best user experience.",
+
+    "websiteDevelopmentText": "Website & E-commerce Development",
+    "websiteDevelopmentBackText": "We help you build a website or online store that fits your business needs and provides a seamless user experience.",
+
+    "graphicDesignText": "Graphic Design",
+    "graphicDesignBackText": "We create innovative graphic designs that represent your brand in a distinctive way.",
+
+    "contentWritingText": "Content Writing",
+    "contentWritingBackText": "We write professional content that reflects your vision and helps attract your target audience.",
+
+    "trainingCoursesText": "Project Development & Entrepreneurship Courses",
+    "trainingCoursesBackText": "We offer specialized training courses in project development and entrepreneurial skills.",
+
+    "podcastProductionText": "Podcast Production",
+    "podcastProductionBackText": "We provide professional podcast recording and production services with high-quality audio and video.",
+
+    "salesManagementText": "Sales Management",
+    "salesManagementBackText": "We help improve your sales management by providing effective strategies to increase revenue."
+  },
+  "testimonials": {
+    "title": "Testimonials"
+  },
+  "contactUs": {
+    "title": "Contact Us",
+    "description1": "Do you have an idea you'd like to develop? Do you need help marketing your project? We're here to assist you!",
+    "description2": "Contact us today to get a free consultation and start your journey towards digital success.",
+    "buttonText": "Contact Us"
+  },
+  "faq": {
+    "questionOne": "What services do you offer?",
+    "answerOne": "We offer a wide range of digital and software services including: page management, graphic design, podcast production, UI/UX design, content writing, marketing strategy development, advertising campaign management, and website and e-commerce store development.",
+
+    "questionTwo": "How long does the development process take?",
+    "answerTwo": "The project development time depends on its size and complexity. Typically, projects take between 2 to 8 weeks, but we provide customized timelines based on each client's needs.",
+
+    "questionThree": "Can I request changes after the project is delivered?",
+    "answerThree": "Yes, we offer a support period after delivery that includes minor edits. Additional changes can be requested for an extra fee depending on the nature of the modifications.",
+
+    "questionFour": "Do you work with small businesses and individuals?",
+    "answerFour": "Absolutely! We offer solutions tailored for all types of businesses, from individuals and startups to large enterprises."
   }
 }
