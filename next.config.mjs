@@ -5,7 +5,8 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    allowMiddlewareResponseBody: true
+    allowMiddlewareResponseBody: true,
+    nativeAddon: 'fail'
   }
 };
 
