@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+
 const policies = [
   {
     title: "الدفع مقدماً وكامل المبلغ",
@@ -41,40 +42,51 @@ const policies = [
 
 const page = () => {
   return (
-    <section className=" space-y-16 py-4 flex flex-col justify-center items-center">
-      <div className="max-w-4xl ">
-        <h1 className=" font-bold text-fontPrimary text-lg lg:text-2xl text-center xl:text-right ">
-          سياساتنا وشروطنا {" "}
+    <section className="space-y-8 sm:space-y-12 md:space-y-16 py-6 sm:py-8 md:py-12 px-4 sm:px-6 md:px-8 flex flex-col justify-center items-center max-w-7xl mx-auto">
+      {/* Header section */}
+      <div className="max-w-4xl w-full">
+        <h1 className="font-bold text-fontPrimary text-xl sm:text-2xl md:text-3xl text-center xl:text-right mb-4 sm:mb-6">
+          سياساتنا وشروطنا
         </h1>
-        <p className=" leading-8  text-sm lg:text-md text-white">
+        <p className="leading-6 sm:leading-7 md:leading-8 text-sm sm:text-base md:text-lg text-white/90">
           نحن في التميز الرقمي نحرص على تقديم أفضل الخدمات لعملائنا الكرام.
           لضمان سير العمل بكل شفافية ووضوح، نود أن نوضح بعض السياسات والشروط
           التي تحكم التعاملات بيننا وبين عملائنا. يُرجى قراءة هذه الشروط بعناية
-          قبل البدء في أي تعامل. 
+          قبل البدء في أي تعامل.
         </p>
       </div>
-      <div className=" relative bg-white  rounded-4xl py-8 px-4 space-y-4">
-        {policies.map((policy, index) => (
-          <div className="text-right space-y-2">
-            <h2 className="  text-bgTertiary font-bold ">{policy.title}</h2>
-            <p className=" text-sm text-black/75 hover:text-black">
-              {policy.desc}
-            </p>
-          </div>
-        ))}
-        <div className=" absolute bg-fontPrimary rounded-[50px]  rounded-tr-[50px] lg:rounded-tr-[200px] -z-11 -top-8 left-0 w-8/12 h-[105%] lg:h-[110%]"></div>
-        <div className=" hidden md:flex absolute top-80  -left-15 ">
-          <Image src={"/Polygonleaft.png"} width={100} height={100}></Image>
+
+      {/* Policies section */}
+      <div className="relative bg-white rounded-3xl sm:rounded-4xl w-full max-w-5xl py-8 px-4 sm:px-6 md:px-8 shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 relative z-10">
+          {policies.map((policy, index) => (
+            <div key={index} className="text-right space-y-2 bg-white/80 backdrop-blur-sm p-4 rounded-lg hover:shadow-md transition-all duration-300">
+              <h2 className="text-bgTertiary font-bold text-base sm:text-lg">{policy.title}</h2>
+              <p className="text-sm sm:text-base text-black/75 hover:text-black transition-colors duration-300">
+                {policy.desc}
+              </p>
+            </div>
+          ))}
         </div>
-        <div className="hidden md:flex absolute top-20  -right-25 ">
-          <Image src={"/Polygonright.png"} width={100} height={100}></Image>
+        
+        {/* Background decorative elements */}
+        <div className="absolute bg-fontPrimary rounded-[30px] sm:rounded-[50px] rounded-tr-[50px] sm:rounded-tr-[100px] lg:rounded-tr-[200px] -z-10 -top-6 sm:-top-8 left-0 w-8/12 h-[103%] sm:h-[105%] lg:h-[110%]"></div>
+        
+        <div className="hidden md:block absolute top-80 -left-10 opacity-70 animate-pulse">
+          <Image src="/Polygonleaft.png" width={100} height={100} alt="Decorative element" />
+        </div>
+        
+        <div className="hidden md:block absolute top-20 -right-10 opacity-70 animate-pulse">
+          <Image src="/Polygonright.png" width={100} height={100} alt="Decorative element" />
         </div>
       </div>
-      <div className=" ">
-        <h1 className=" font-bold text-fontPrimary text-lg lg:text-2xl text-center">
-          شكرًا لاختيارك التمـيـز الرقمي!{" "}
+
+      {/* Footer section */}
+      <div className="max-w-4xl text-center">
+        <h1 className="font-bold text-fontPrimary text-xl sm:text-2xl md:text-3xl mb-4">
+          شكرًا لاختيارك التمـيـز الرقمي!
         </h1>
-        <p className=" leading-8 text-sm lg:text-md  text-white ">
+        <p className="leading-6 sm:leading-7 md:leading-8 text-sm sm:text-base md:text-lg text-white/90 max-w-3xl mx-auto">
           نحن هنا لضمان تقديم أفضل الخدمات لك. إذا كانت لديك أي استفسارات حول
           سياساتنا أو شروطنا، لا تتردد في الاتصال بنا
         </p>

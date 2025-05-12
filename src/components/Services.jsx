@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 
 const Services = () => {
   const t = useTranslations("services");
+  const isEnglish = t("title") !== "خدماتنا"; // Check if language is English
 
   const SERVICES = [
     {
@@ -68,14 +69,18 @@ const Services = () => {
         <div className="w-20 h-1 bg-fontPrimary mx-auto rounded-full"></div>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-8 md:gap-8 lg:gap-10 justify-items-center max-w-7xl mx-auto">
+      <div className="grid grid-cols-8 md:grid-cols-4 gap-8 max-w-7xl mx-auto justify-items-center">
         {SERVICES.map((service, index) => (
-          <ServiceCard
-            text={service.text}
+          <div
             key={index}
-            image={service.image}
-            backText={service.backText}
-          />
+            className="col-span-4 md:col-span-1"
+          >
+            <ServiceCard
+              text={service.text}
+              image={service.image}
+              backText={service.backText}
+            />
+          </div>
         ))}
       </div>
 
