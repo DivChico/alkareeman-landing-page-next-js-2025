@@ -23,8 +23,8 @@ const Footer = () => {
             <Image
               src="/logo.png"
               alt="Company Logo"
-              width={80}
-              height={80}
+              width={50}
+              height={30}
               className="object-contain"
               sizes="(max-width: 640px) 60px, (max-width: 768px) 60px, 70px"
             />
