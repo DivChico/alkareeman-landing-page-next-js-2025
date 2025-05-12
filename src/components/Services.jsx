@@ -60,22 +60,30 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-16   space-y-16">
-      <h2 className="font-bold text-4xl text-center text-fontPrimary">
-        {t("title")}
-      </h2>
-      <div className=" gap-8  grid  grid-cols-2 md:flex md:items-center md:justify-center md:flex-wrap  md:gap-16 justify-items-center  justify-center">
+    <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 space-y-8 sm:space-y-12 md:space-y-16">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl text-fontPrimary mb-4">
+          {t("title")}
+        </h2>
+        <div className="w-20 h-1 bg-fontPrimary mx-auto rounded-full"></div>
+      </div>
+
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-8 md:gap-8 lg:gap-10 justify-items-center max-w-7xl mx-auto">
         {SERVICES.map((service, index) => (
           <ServiceCard
             text={service.text}
             key={index}
             image={service.image}
             backText={service.backText}
-            className="h-[180px] w-[370px] relative  rounded-2xl group cursor-pointer"
           />
         ))}
       </div>
-      <Button> {t("buttonText")}</Button>
+
+      <div className="text-center mt-8">
+        <Button className="mx-auto px-8 py-3 text-base sm:text-lg">
+          {t("buttonText")}
+        </Button>
+      </div>
     </section>
   );
 };

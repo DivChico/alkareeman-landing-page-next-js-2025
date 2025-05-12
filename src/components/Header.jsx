@@ -193,6 +193,47 @@ const Header = ({ locale }) => {
             <NavLink link="/apply-job">{t("applyJob")} </NavLink>
             <NavLink link="/contact-us">{t("contactUs")} </NavLink>
             <NavLink link="/privacy-policy">{t("privacyPolicy")} </NavLink>
+            
+            {/* Language switcher for mobile */}
+            <li className="mt-4 pt-4 border-t border-gray-200">
+              <Link 
+                href={`/${oppositeLocale}`}
+                className="flex items-center justify-center gap-2 text-bgTertiary hover:text-fontPrimary"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 23 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="inline-block"
+                >
+                  <path
+                    d="M11.5 24.2888C17.2991 24.2888 22 19.0755 22 12.6444C22 6.21339 17.2991 1 11.5 1C5.70101 1 1 6.21339 1 12.6444C1 19.0755 5.70101 24.2888 11.5 24.2888Z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M1 12.6444H22"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M15.5388 12.6444C15.3405 16.9027 13.9262 20.9806 11.5004 24.2888C9.07458 20.9806 7.66028 16.9027 7.46191 12.6444C7.66028 8.38616 9.07458 4.30818 11.5004 1C13.9262 4.30818 15.3405 8.38616 15.5388 12.6444Z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                {locale === "ar" ? "English" : "اللغة العربية"}
+              </Link>
+            </li>
           </ul>
         </nav>
       )}
