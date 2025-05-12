@@ -10,15 +10,14 @@ const page = () => {
     const { email, name } = formData;
     console.log(formData);
   };
-  
+
   return (
     <section className="relative flex items-center justify-center flex-col lg:flex-row-reverse my-4 sm:my-8 md:my-12 gap-6 md:gap-12 lg:gap-16 tracking-wide px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-12 max-w-7xl mx-auto">
       {/* apply form */}
       <div className="w-full lg:w-1/2 space-y-4 sm:space-y-6 py-4 bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 md:p-8 shadow-sm">
         <h1 className="font-bold text-fontPrimary text-2xl sm:text-3xl md:text-4xl text-center lg:text-right">
-          قدم على وظيفة أحلامك الأن!
+           كون جزء من فريقنا {" "}
         </h1>
-        <div className="w-16 h-1 bg-fontPrimary mx-auto lg:mr-0 lg:ml-auto rounded-full mb-4"></div>
         <ApplyJobForm action={action} />
       </div>
 
@@ -36,7 +35,7 @@ const page = () => {
           <div className="absolute w-[60px] h-[80px] sm:w-[80px] sm:h-[100px] md:w-[92px] md:h-[116px] -top-5 left-10 bg-fontPrimary rounded-tr-[10px] sm:rounded-tr-[12px] md:rounded-tr-[15px] rounded-b-[10px] sm:rounded-b-[12px] md:rounded-b-[15px] opacity-80"></div>
         </div>
       </div>
-      
+
       {/* Decorative elements */}
       <div className="hidden xl:block -z-0 absolute top-0 left-0 opacity-70 animate-pulse">
         <Image

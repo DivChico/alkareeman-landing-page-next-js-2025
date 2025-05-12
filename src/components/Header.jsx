@@ -79,10 +79,10 @@ const Header = ({ locale }) => {
     >
       <div>
         <a href="/" className="flex justify-center items-center gap-2">
-          <p className="font-semibold text-white tracking-wide text-lg md:hidden">
+          <p className="font-semibold text-white tracking-wide text-lg ">
             {locale === "ar" ? "التميز الرقمي" : "Digital Excellence"}
           </p>
-          <Image src="/logo.png" width={80} height={50} alt="Logo" />
+          <Image src="/logo.png" width={50} height={30} alt="Logo" />
         </a>
       </div>
 
@@ -193,10 +193,10 @@ const Header = ({ locale }) => {
             <NavLink link="/apply-job">{t("applyJob")} </NavLink>
             <NavLink link="/contact-us">{t("contactUs")} </NavLink>
             <NavLink link="/privacy-policy">{t("privacyPolicy")} </NavLink>
-            
+
             {/* Language switcher for mobile */}
             <li className="mt-4 pt-4 border-t border-gray-200">
-              <Link 
+              <Link
                 href={`/${oppositeLocale}`}
                 className="flex items-center justify-center gap-2 text-bgTertiary hover:text-fontPrimary"
                 onClick={() => setIsMenuOpen(false)}

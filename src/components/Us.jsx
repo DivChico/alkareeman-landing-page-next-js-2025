@@ -18,10 +18,10 @@ const Us = () => {
           isEnglish ? "md:text-left" : "md:text-right"
         }`}
       >
-        <h2 className="font-bold text-fontPrimary text-2xl sm:text-3xl md:text-4xl">
+        <h2 className="font-bold text-fontPrimary !text-fontPrimary text-2xl sm:text-3xl md:text-4xl">
           {t("title")}
         </h2>
-        <p className="leading-7 sm:leading-8 md:leading-10 text-whites text-base sm:text-xl md:text-2xl">
+        <p className="leading-7 sm:leading-8 md:leading-10 text-white !text-white text-base sm:text-xl md:text-2xl">
           {t("description")}
         </p>
       </div>

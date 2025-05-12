@@ -61,7 +61,7 @@ const Footer = () => {
       </div>
 
       {/* copyright */}
-      <div className="w-full text-center mb-16 sm:mb-4">
+      <div className="w-full text-center mb-20 sm:mb-8">
         <p className="text-white/50 text-xs sm:text-sm py-2">
           {f("copyWrite")}
         </p>
