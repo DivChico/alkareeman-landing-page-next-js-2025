@@ -8,7 +8,7 @@ const FeatureCard = ({ image, text }) => {
         <div className="flex justify-center items-center align-middle  h-full">
           <Image src={image} height={70} width={70}></Image>
         </div>
-        <p className=" flex-1 text-black text-lg  h-full flex items-center justify-center">
+        <p className=" flex-1 text-black text-md  h-full flex items-center justify-center">
           {text}
         </p>
       </div>

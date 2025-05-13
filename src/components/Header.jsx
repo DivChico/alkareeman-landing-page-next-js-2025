@@ -57,15 +57,31 @@ const Header = ({ locale }) => {
 
   const NavLink = ({ children, link }) => {
     return (
-      <a href={link} onClick={() => setIsMenuOpen(false)}>
-        <li
-          className={`flex items-center text-lg justify-center border-bgSecondary hover:text-fontPrimary hover:scale-125 hover:border-b-2 h-full transition-all duration-100 ease-in-out ${
-            isMenuOpen ? "text-black/75" : ""
-          }`}
+      <li role="none" className="flex items-center justify-center">
+        <a
+          href={link}
+          onClick={() => setIsMenuOpen(false)}
+          className="focus:outline-none focus-visible:ring-2 focus-visible:ring-bgTertiary px-2 py-1 rounded transition-colors duration-200 hover:bg-bgTertiary/10 hover:text-fontPrimary text-base md:text-white text-black md:text-lg"
+          aria-current="page"
+          role="menuitem"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              setIsMenuOpen(false);
+            }
+          }}
+          aria-label={typeof children === "string" ? children : undefined}
+          style={{ minWidth: 0 }}
         >
-          {children}
-        </li>
-      </a>
+          <span
+            className="flex items-center justify-center border-bgSecondary hover:scale-110 hover:border-b-2 h-full transition-all duration-100 ease-in-out group-hover:text-bgTertiary group-hover:bg-bgTertiary/10"
+            role="menuitem"
+            style={{ minWidth: 0 }}
+          >
+            <span className="whitespace-nowrap">{children}</span>
+          </span>
+        </a>
+      </li>
     );
   };
 
@@ -86,11 +102,12 @@ const Header = ({ locale }) => {
         </a>
       </div>
 
-      <nav className="hidden md:block">
+      <nav className="hidden md:block" aria-label="Main Navigation">
         <ul
           className={`flex ${
             locale === "ar" ? "flex-row-reverse" : ""
-          } gap-6 text-sm px-2 py-4 h-16`}
+          } gap-2 md:gap-6 text-sm px-1 md:px-2 py-2 md:py-4 h-14 md:h-16 items-center`}
+          role="menubar"
         >
           <NavLink link="/">{t("home")}</NavLink>
           <NavLink link="#about-us">{t("aboutUs")} </NavLink>
@@ -101,7 +118,7 @@ const Header = ({ locale }) => {
         </ul>
       </nav>
 
-      <div className="hidden md:flex h-16 flex-row-reverse items-center gap-2">
+      <div className="hidden md:flex h-14 md:h-16 flex-row-reverse items-center gap-2">
         <svg
           width="23"
           height="26"
@@ -141,7 +158,7 @@ const Header = ({ locale }) => {
           toggleMenu();
           e.stopPropagation();
         }}
-        className="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
+        className="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-bgTertiary"
       >
         <span className="sr-only">Toggle menu</span>
         <svg
@@ -163,13 +180,14 @@ const Header = ({ locale }) => {
       {isMenuOpen && (
         <nav
           ref={menuRef}
-          className={`md:hidden absolute top-16 right-0 bg-white w-full shadow-lg p-5 z-10 overflow-hidden transition-all duration-500 ease-in-out transform ${
+          aria-label="Mobile Navigation"
+          className={`md:hidden  border-red-600 fixed top-0 left-0 w-full h-full  z-50 flex flex-col items-center pt-20 transition-all duration-500 ease-in-out ${
             isMenuOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
         >
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="absolute top-4 left-4 text-gray-600 hover:bg-gray-100 rounded-full p-2 hover:text-red-500 hover:scale-105 active:scale-95 z-10"
+            className="absolute top-24 left-12 text-gray-600 hover:bg-gray-100 rounded-full p-2 hover:text-red-500 hover:scale-105 active:scale-95 z-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-bgTertiary"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +204,10 @@ const Header = ({ locale }) => {
               />
             </svg>
           </button>
-          <ul className="flex flex-col gap-4 text-center text-lg">
+          <ul
+            className="flex flex-col gap-2 md:gap-4 text-center text-base md:text-lg w-full max-w-xs mx-auto bg-white rounded-lg shadow-lg p-4"
+            role="menubar"
+          >
             <NavLink link="/">{t("home")}</NavLink>
             <NavLink link="#about-us">{t("aboutUs")} </NavLink>
             <NavLink link="/contact-us">{t("requestService")} </NavLink>
@@ -198,7 +219,7 @@ const Header = ({ locale }) => {
             <li className="mt-4 pt-4 border-t border-gray-200">
               <Link
                 href={`/${oppositeLocale}`}
-                className="flex items-center justify-center gap-2 text-bgTertiary hover:text-fontPrimary"
+                className="flex items-center justify-center gap-2 text-bgTertiary hover:text-fontPrimary text-base md:text-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <svg

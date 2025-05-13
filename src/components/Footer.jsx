@@ -61,7 +61,7 @@ const Footer = () => {
       </div>
 
       {/* copyright */}
-      <div className="w-full text-center mb-20 sm:mb-8">
+      <div className="w-full text-center mb-20 sm:mb-0">
         <p className="text-white/50 text-xs sm:text-sm py-2">
           {f("copyWrite")}
         </p>
@@ -69,19 +69,37 @@ const Footer = () => {
 
       {/* social media */}
       <div className="flex flex-col sm:flex-row justify-center w-full sm:w-4/5 md:w-1/2 lg:w-2/5 py-2 sm:py-2 md:py-3 rounded-tr-[20px] rounded-tl-[20px] sm:rounded-tl-[30px] sm:rounded-tr-[30px] md:rounded-tl-[0px] md:rounded-tr-[80px] lg:rounded-tr-[100px] items-center gap-4 sm:gap-6 md:gap-10 absolute bottom-0 left-0 bg-bgTertiary">
-        <div className="gap-3 sm:gap-4 md:gap-5 flex items-center justify-center">
+        <div
+          className="gap-3 sm:gap-4 md:gap-5 flex items-center justify-center"
+          role="navigation"
+          aria-label="Social Media Links"
+        >
           {/* Social icons */}
-          <SocialIcon href="" icon={WhatsappIcon} />
+          <SocialIcon
+            href="https://wa.me/201234567890"
+            icon={WhatsappIcon}
+            ariaLabel="WhatsApp"
+          />
           <SocialIcon
             href="https://www.facebook.com/share/1J25BsSaDP/?mibextid=wwXIfr"
             icon={FacebookIcon}
+            ariaLabel="Facebook"
           />
           <SocialIcon
             href="https://www.instagram.com/lrqmyltmyz?igsh=cXIyNXppc3dpeWM2"
             icon={InstagramIcon}
+            ariaLabel="Instagram"
           />
-          <SocialIcon href="" icon={GmailIcon} />
-          <SocialIcon href="" icon={PhoneIcon} />
+          <SocialIcon
+            href="mailto:info@alkareeman.com"
+            icon={GmailIcon}
+            ariaLabel="Email"
+          />
+          <SocialIcon
+            href="tel:+201234567890"
+            icon={PhoneIcon}
+            ariaLabel="Phone"
+          />
         </div>
         <p className="text-white text-xs sm:text-sm md:text-sm mt-2 sm:mt-0">
           {f("socialMedia")}
@@ -104,12 +122,13 @@ const FooterLink = ({ children, href }) => {
 };
 
 // Social icon component for cleaner code
-const SocialIcon = ({ href, icon: Icon }) => {
+const SocialIcon = ({ href, icon: Icon, ariaLabel }) => {
   return (
     <a
       href={href}
-      target={href ? "_blank" : ""}
-      rel="noopener noreferrer"
+      target={href && href.startsWith("http") ? "_blank" : undefined}
+      rel={href && href.startsWith("http") ? "noopener noreferrer" : undefined}
+      aria-label={ariaLabel}
       className="group hover:scale-125 transition-all duration-300 ease-in-out"
     >
       <div className="text-white group-hover:text-bgTertiary">
