@@ -9,7 +9,7 @@ const Us = () => {
   return (
     <section
       id="about-us"
-      className={`py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 flex flex-col ${
+      className={`py-8  sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 flex flex-col ${
         isEnglish ? "md:flex-row" : "md:flex-row-reverse"
       } items-center justify-center gap-4 md:gap-12 lg:gap-24`}
     >

@@ -40,7 +40,7 @@ body::before {
   height: 100%;
   width: 100%;
   background: var(--background);
-  opacity: 0.9;
+  opacity: 0.1;
   pointer-events: none;
   z-index: -20;
 }
