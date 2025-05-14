@@ -11,7 +11,7 @@ export default function Home({ params }) {
   const { locale } = params;
 
   return (
-    <main className="tracking-wide">
+    <main className="tracking-wide mx-2 md:mx-0 ">
       <Hero locale={locale} />
       <Features />
       <Us />

@@ -31,7 +31,7 @@ const EmblaCarousel = (props) => {
         <div className="embla__container  justify-items-center">
           {slides.map((testimonial, index) => (
             <div
-              className="embla__slide  flex justify-center items-center "
+              className="embla__slide  flex justify-center items-center  "
               key={index}
             >
               <TestimonialCard

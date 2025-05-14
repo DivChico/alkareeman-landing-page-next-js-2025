@@ -26,7 +26,7 @@ const Us = () => {
         </p>
       </div>
 
-      <div className="relative w-[250px] sm:w-[300px] md:w-[400px] lg:w-[500px]">
+      <div className="relative w-[300px] sm:w-[350px] md:w-[400px] lg:w-[500px]">
         <Image
           src="/usImage.jpg"
           className="rounded-2xl w-full h-auto"

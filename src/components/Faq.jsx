@@ -31,9 +31,9 @@ const Faq = () => {
   };
 
   return (
-    <section className="relative py-8 sm:py-12 md:py-16 bg-white w-full my-8 rounded-tl-[30px] sm:rounded-tl-[50px] md:rounded-tl-[200px] rounded-br-[30px] sm:rounded-br-[50px] md:rounded-br-[200px] space-y-6 sm:space-y-8 md:space-y-10 overflow-hidden">
+    <section className="relative py-8  sm:py-12 md:py-16 bg-white w-full my-8 rounded-tl-[30px] sm:rounded-tl-[50px] md:rounded-tl-[200px] rounded-br-[30px] sm:rounded-br-[50px] md:rounded-br-[200px] space-y-6 sm:space-y-8 md:space-y-10 overflow-hidden">
       <div className="text-center mb-8">
-        <h2 className="font-bold text-fontPrimary text-2xl sm:text-3xl md:text-4xl inline-flex items-center gap-2">
+        <h2 className="font-bold text-fontPrimary text-xl sm:text-3xl md:text-4xl inline-flex items-center gap-2">
           <span>(FAQ)</span>
           <span>{t("title")}</span>
         </h2>
