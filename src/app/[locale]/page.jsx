@@ -23,7 +23,7 @@ export default function Home({ params }) {
       <Features />
       <Us />
       <Services />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <ContactUs />
       <Faq />
     </main>
