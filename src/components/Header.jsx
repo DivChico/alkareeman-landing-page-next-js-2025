@@ -87,7 +87,7 @@ const Header = ({ locale }) => {
 
   return (
     <header
-      className={`container mx-auto sticky z-50 top-0 xl:px-16 px-2 text-center flex justify-between gap-16 py-2 ${
+      className={`container  mx-auto sticky z-50 top-0 xl:px-16 px-2 text-center flex justify-between gap-16 py-2 ${
         locale === "ar" ? "flex-row-reverse" : ""
       } items-center backdrop-blur-lg transform transition-transform duration-500 ease-in-out ${
         isOpen ? "translate-y-0" : "-translate-y-full"

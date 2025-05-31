@@ -39,6 +39,9 @@ const policies = [
     desc: "نحتفظ بالحق في تعديل الشروط والسياسات في أي وقت حسب الحاجة، مع إعلام العملاء بأي تعديلات من خلال البريد الإلكتروني أو وسائل الاتصال المتاحة.",
   },
 ];
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "ar" }];
+}
 
 const page = () => {
   return (
@@ -60,24 +63,39 @@ const page = () => {
       <div className="relative bg-white rounded-3xl sm:rounded-4xl w-full max-w-5xl py-8 px-4 sm:px-6 md:px-8 shadow-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 relative z-10">
           {policies.map((policy, index) => (
-            <div key={index} className="text-right space-y-2 bg-white/80 backdrop-blur-sm p-4 rounded-lg hover:shadow-md transition-all duration-300">
-              <h2 className="text-bgTertiary font-bold text-base sm:text-lg">{policy.title}</h2>
+            <div
+              key={index}
+              className="text-right space-y-2 bg-white/80 backdrop-blur-sm p-4 rounded-lg hover:shadow-md transition-all duration-300"
+            >
+              <h2 className="text-bgTertiary font-bold text-base sm:text-lg">
+                {policy.title}
+              </h2>
               <p className="text-sm sm:text-base text-black/75 hover:text-black transition-colors duration-300">
                 {policy.desc}
               </p>
             </div>
           ))}
         </div>
-        
+
         {/* Background decorative elements */}
         <div className="absolute bg-fontPrimary rounded-[30px] sm:rounded-[50px] rounded-tr-[50px] sm:rounded-tr-[100px] lg:rounded-tr-[200px] -z-10 -top-6 sm:-top-8 left-0 w-8/12 h-[103%] sm:h-[105%] lg:h-[110%]"></div>
-        
+
         <div className="hidden md:block absolute top-80 -left-10 opacity-70 animate-pulse">
-          <Image src="/Polygonleaft.png" width={100} height={100} alt="Decorative element" />
+          <Image
+            src="/Polygonleaft.png"
+            width={100}
+            height={100}
+            alt="Decorative element"
+          />
         </div>
-        
+
         <div className="hidden md:block absolute top-20 -right-10 opacity-70 animate-pulse">
-          <Image src="/Polygonright.png" width={100} height={100} alt="Decorative element" />
+          <Image
+            src="/Polygonright.png"
+            width={100}
+            height={100}
+            alt="Decorative element"
+          />
         </div>
       </div>
 

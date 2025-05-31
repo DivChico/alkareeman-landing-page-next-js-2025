@@ -7,11 +7,18 @@ import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import Us from "@/components/Us";
 
+export function generateStaticParams() {
+  return [
+    { locale: "en" }, // Add all your supported locales here
+    { locale: "ar" },
+  ];
+}
+
 export default function Home({ params }) {
   const { locale } = params;
 
   return (
-    <main className="tracking-wide mx-2 md:mx-0 ">
+    <main className="tracking-wide mx-2 md:mx-0">
       <Hero locale={locale} />
       <Features />
       <Us />

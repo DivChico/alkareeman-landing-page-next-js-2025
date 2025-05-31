@@ -2,7 +2,9 @@ import Button from "@/components/Button";
 import ContactUsForm from "@/components/ContactUsForm";
 import Image from "next/image";
 import React from "react";
-
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "ar" }];
+}
 const page = () => {
   const action = async (prevState, formData) => {
     "use server";

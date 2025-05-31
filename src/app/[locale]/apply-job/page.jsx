@@ -2,7 +2,9 @@ import ApplyJobForm from "@/components/ApplyJobForm";
 import Button from "@/components/Button";
 import Image from "next/image";
 import React from "react";
-
+export function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "ar" }];
+}
 const page = () => {
   const action = async (prevState, formData) => {
     "use server";
@@ -16,7 +18,7 @@ const page = () => {
       {/* apply form */}
       <div className="w-full lg:w-1/2 space-y-4 sm:space-y-6 py-4 bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 md:p-8 shadow-sm">
         <h1 className="font-bold text-fontPrimary text-2xl sm:text-3xl md:text-4xl text-center lg:text-right">
-           كون جزء من فريقنا {" "}
+          كون جزء من فريقنا {" "}
         </h1>
         <ApplyJobForm action={action} />
       </div>
