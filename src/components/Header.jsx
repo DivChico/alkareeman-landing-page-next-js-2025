@@ -61,7 +61,7 @@ const Header = ({ locale }) => {
         <a
           href={link}
           onClick={() => setIsMenuOpen(false)}
-          className="focus:outline-none focus-visible:ring-2 focus-visible:ring-bgTertiary px-2 py-1 rounded transition-colors duration-200 hover:bg-bgTertiary/10 hover:text-fontPrimary text-base md:text-white text-black md:text-lg"
+          className="focus:outline-none focus-visible:ring-2 focus-visible:ring-bgTertiary px-2 py-1 rounded transition-colors duration-200 hover:bg-bgTertiary/10  text-base md:text-white text-black md:text-lg"
           aria-current="page"
           role="menuitem"
           tabIndex={0}
@@ -87,9 +87,9 @@ const Header = ({ locale }) => {
 
   return (
     <header
-      className={`container  mx-auto sticky z-50 top-0 xl:px-16 px-2 text-center flex justify-between gap-16 py-2 ${
+      className={`container rounded-b-3xl rounder-l-3xl  mx-auto sticky z-50 top-0 xl:px-16 px-2 text-center flex justify-between gap-16 py-2 ${
         locale === "ar" ? "flex-row-reverse" : ""
-      } items-center backdrop-blur-lg transform transition-transform duration-500 ease-in-out ${
+      } items-center bg-fontPrimary backdrop-blur-lg transform transition-transform duration-500 ease-in-out ${
         isOpen ? "translate-y-0" : "-translate-y-full"
       }`}
     >
